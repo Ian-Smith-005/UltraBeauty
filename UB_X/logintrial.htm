@@ -1,0 +1,203 @@
+
+<!doctype html>
+                        <html>
+                            <head>
+                                <meta charset='utf-8'>
+                                <meta name='viewport' content='width=device-width, initial-scale=1'>
+                                <title>Snippet - BBBootstrap</title>
+                                <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css' rel='stylesheet'>
+                                <link href='https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css' rel='stylesheet'>
+                                <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+                                <style>::-webkit-scrollbar {
+                                  width: 8px;
+                                }
+                                /* Track */
+                                ::-webkit-scrollbar-track {
+                                  background: #f1f1f1; 
+                                }
+                                 
+                                /* Handle */
+                                ::-webkit-scrollbar-thumb {
+                                  background: #888; 
+                                }
+                                
+                                /* Handle on hover */
+                                ::-webkit-scrollbar-thumb:hover {
+                                  background: #555; 
+                                } body{
+    background-color:#040539;
+}
+
+.card{
+    width:350px;
+    padding:10px;
+    border:none;
+    border-radius:20px;
+}
+
+.form-input input{
+    height:45px;
+    padding-right:35px;
+    border:2px solid #eee;
+    transition:all 0.5s;
+}
+
+.form-input input:focus{
+    box-shadow:none;
+    border:2px solid #000;
+}
+
+.info-text{
+    font-size:14px;
+}
+
+.form-input i{
+    position:absolute;
+    top:14px;
+    right:10px;
+}
+
+
+
+.go-button{
+    border:none;
+    height:50px;
+    width:50px;
+    font-size:29px;
+    color:#fff;
+    background-color:#651FFF;
+    border-radius:50%;
+    transition:all 0.5s;
+}
+
+.go-button:hover{
+    background-color:#6200EA;
+}
+.card {
+  width: 350px;
+  padding: 10px;
+  border-radius: 20px;
+  background: #fff;
+  border: none;
+  height: 350px;
+  position: relative;
+}
+
+.container {
+  height: 100vh;
+}
+
+body {
+  background: #eee;
+}
+
+.mobile-text {
+  color: #989696b8;
+  font-size: 15px;
+}
+
+.form-control {
+  margin-right: 12px;
+}
+
+.form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #ff8880;
+  outline: 0;
+  box-shadow: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+</style>
+                                </head>
+                                <body className='snippet-body'>
+                                <div class="container vh-100 d-flex justify-content-center align-items-center">
+    <div class="card py-4 px-4">
+        <div class="text-center">
+            <img src="https://i.imgur.com/u5cP8rr.png" width="60">
+        </div>
+        <div class="text-center mt-3">
+            
+        <span class="info-text">Please enter your mobile number to signup or login</span>
+        
+        </div>
+        <div class="position-relative mt-3 form-input">
+            <input class="form-control" type="number" required id="phone_number">
+            <i class='bx bxs-phone'></i>
+        </div>
+        
+        
+        <div class=" mt-5 d-flex justify-content-between align-items-center">
+            <span>Login or Signup</span>
+            <button class="go-button" onclick="phoneAuth()"><i class='bx bxs-right-arrow-alt' ></i></button>
+        </div>
+        <div class="recaptcha-container"></div>
+    </div>
+</div>
+
+
+<div class="d-flex justify-content-center align-items-center container">
+    <div class="card py-5 px-3">
+        <h5 class="m-0">Mobile phone verification</h5><span class="mobile-text">Enter the code we just send on your mobile phone <b class="text-danger">+91 86684833</b></span>
+        <div class="d-flex flex-row mt-5">
+            <input type="number" class="form-control" max="9" autofocus>
+            <input type="number" class="form-control" max="9">
+            <input type="number" class="form-control" max="9">
+            <input type="number" class="form-control" max="9">
+        </div>
+        <div class="text-center mt-5">
+            <span class="d-block mobile-text">Don't receive the code?</span><span class="font-weight-bold text-danger cursor">Resend</span>
+        </div>
+    </div>
+</div>
+
+<script>
+    const inputs = document.querySelectorAll('input[type="number"]');
+    
+    function checkInputs() {
+        // Check if all inputs are filled
+        const allFilled = Array.from(inputs).every(input => input.value.length === 1);
+        
+        if (allFilled) {
+            // All inputs are filled, initiate verification process
+            initiateVerification();
+        }
+    }
+    
+    inputs.forEach((input, index) => {
+        input.addEventListener('input', (event) => {
+            if (event.target.value.length > 1) {
+                event.target.value = event.target.value.slice(0, 1);
+            }
+            
+            if (index < inputs.length - 1 && event.target.value.length === 1) {
+                inputs[index + 1].focus();
+            }
+            
+            // Call checkInputs function after each input to check if all inputs are filled
+            checkInputs();
+        });
+    });
+    
+    function initiateVerification() {
+        // Add code to initiate the verification process here
+        console.log('Verification initiated!');
+        // You can add your verification logic here, for example, sending a request to a server for verification
+    }
+</script>
+
+                                <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js'></script>
+                                <script type='text/javascript' src='#'></script>
+                                <script type='text/javascript' src='#'></script>
+                                <script type='text/javascript' src='#'></script>
+                                <script type='text/javascript'>//your javascript goes here</script>
+                                <script type='text/javascript'>var myLink = document.querySelector('a[href="#"]');
+                                myLink.addEventListener('click', function(e) {
+                                  e.preventDefault();
+                                });</script>
+                            
+                                </body>
+                            </html>
