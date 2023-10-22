@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles/pages/index.css">
+    <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' rel='stylesheet'>
+    <link href='https://use.fontawesome.com/releases/v5.7.2/css/all.css' rel='stylesheet'>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.7/flipclock.css'>
+    <link rel="stylesheet" href="styles/pages/checkit.css">
+    
+</head>
+
+<body>
+
+</body>
+
+<div class="checkout-container">
+  
+  <div class="left-side">
+    <div class="text-box">
+      <h1 class="home-heading">Ultra Beauty Africa</h1>
+      <p class="home-price"><em>Cosmetics</em> at an affordable price</p>
+      <hr class="left-hr" />
+      <p class="home-desc"><em>Entire collection </em>of <em>Goods</em></p>
+     
+    </div>
+  </div>
+  <div class="right-side">
+    <div class="receipt">
+     <a href="index.html"> <img src="images/icons/ultra-mobile-logo.png" style="height: 50px; width: 50px;"> </a>
+      
+      <h2 class="receipt-heading">Receipt Summary</h2>
+      <div>
+        <table class="table">
+          <tr>
+            <td>Subtotal</td>
+            <td class="price" id="subtotal">0.00</td>
+          </tr>
+          
+            <td>Shipping</td>
+            <td class="price">200.00</td>
+          </tr>
+          <tr>
+            <td>Discount</td>
+            <td class="price">0.00</td>
+          </tr>
+          <tr class="total">
+            <td>Total</td>
+            <td class="price" id="total">0.00</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="payment-info">
+      <h3 class="payment-heading">Payment Information</h3>
+      <form class="form-box" enctype="text/plain" method="get" target="_blank">
+        <div>
+          <label for="full-name">Full Name</label>
+          <input
+            id="full-name"
+            name="full-name"
+            placeholder="Johnny Doe"
+            required
+            type="text"
+          />
+        </div>
+        <div>
+            <label for="Country">Country</label>
+            <input
+              id="Country"
+              name="Country"
+              placeholder="Still in Kenya"
+              readonly
+              type="text" value="Kenya"
+            />
+          </div>
+          <div>
+            <label for="Phone">Mpesa Phone Number</label>
+            <input
+              id="Phone"
+              name="Phone"
+              placeholder="Enter you Number"
+              required
+              type="text" value=""
+            />
+          </div>
+<div>
+<label for="counties">County</label> <br>
+<select name="counties" id="counties">
+    <option value="">Select your county</option>
+    <option value="Baringo">Baringo</option>
+    <option value="Bomet">Bomet</option>
+    <option value="Bungoma">Bungoma</option>
+    <option value="Busia">Busia</option>
+    <option value="Elgeyo-Marakwet">Elgeyo-Marakwet</option>
+    <option value="Embu">Embu</option>
+    <option value="Garissa">Garissa</option>
+    <option value="Homa Bay">Homa Bay</option>
+    <option value="Isiolo">Isiolo</option>
+    <option value="Kajiado">Kajiado</option>
+    <option value="Kakamega">Kakamega</option>
+    <option value="Kericho">Kericho</option>
+    <option value="Kiambu">Kiambu</option>
+    <option value="Kilifi">Kilifi</option>
+    <option value="Kirinyaga">Kirinyaga</option>
+    <option value="Kisii">Kisii</option>
+    <option value="Kisumu">Kisumu</option>
+    <option value="Kitui">Kitui</option>
+    <option value="Kwale">Kwale</option>
+    <option value="Laikipia">Laikipia</option>
+    <option value="Lamu">Lamu</option>
+    <option value="Machakos">Machakos</option>
+    <option value="Makueni">Makueni</option>
+    <option value="Mandera">Mandera</option>
+    <option value="Marsabit">Marsabit</option>
+    <option value="Meru">Meru</option>
+    <option value="Migori">Migori</option>
+    <option value="Mombasa">Mombasa</option>
+    <option value="Murang'a">Murang'a</option>
+    <option value="Nairobi">Nairobi</option>
+    <option value="Nakuru">Nakuru</option>
+    <option value="Nandi">Nandi</option>
+    <option value="Narok">Narok</option>
+    <option value="Nyamira">Nyamira</option>
+    <option value="Nyandarua">Nyandarua</option>
+    <option value="Nyeri">Nyeri</option>
+    <option value="Samburu">Samburu</option>
+    <option value="Siaya">Siaya</option>
+    <option value="Taita-Taveta">Taita-Taveta</option>
+    <option value="Tana River">Tana River</option>
+    <option value="Tharaka-Nithi">Tharaka-Nithi</option>
+    <option value="Trans Nzoia">Trans Nzoia</option>
+    <option value="Turkana">Turkana</option>
+    <option value="Uasin Gishu">Uasin Gishu</option>
+    <option value="Vihiga">Vihiga</option>
+    <option value="Wajir">Wajir</option>
+    <option value="West Pokot">West Pokot</option>
+  </select>
+</div>
+<div>
+<label for="full-name">Delivery</label>
+<input
+  id="location"
+  name="full-name"
+  placeholder="i.e Karen"
+  required
+  type="text" 
+/>
+</div>
+
+
+        <button class="btn">
+          <i class="fa-solid fa-lock"></i> Continue to payment
+        </button>
+      </form>
+
+      <p class="footer-text">
+        <i class="fa-solid fa-lock"></i>
+        Your credit card information is encrypted
+      </p>
+    </div>
+  </div>
+</div>
+
+<!--POP UP PAYMENT-->
+<div class="process-payment">
+    <div class="pop-it">
+      <div class="container-fluid">
+          <div class="row d-flex justify-content-center">
+            <div class="col-sm-12">
+              <div class="card mx-auto">
+                <p class="heading">Your Payment is Being Processed</p>
+                <div class="pop-it-content">
+                  <!--progress bar-->
+                  <div class="progress-container">
+                    <div class="progress-bar"></div>
+                  </div>
+                  <br>
+                  <br>
+                  <br>
+                  <!--progress bar-->
+                  <!--timer-->
+                  <div class="countdown-wrapper">
+                    <div id="countdown" class="countdown"></div>
+                  </div>
+                  <p class="prompt">You have 1 min 30 secs (90) seconds to complete Payment, if the STk does not pop up wait and retry or pay manually <a href="#">Here</a></p>
+                  <!--timer-->
+                  <button class="button green-button" disabled>Back Home</button>
+                  <button class="button purple-button" disabled>Restart</button>
+                  <button class="button red-button">Cancel Confirmation</button>
+                  <div class="wrapper"> <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"> <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/> <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                  </svg>
+                  <div class="circle-border"></div>
+              <div class="circle">
+                  <div class="error"></div>
+                </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+</div>
+<style>
+
+.circle,
+.circle-border {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.circle {
+  z-index: 1;
+  position: absolute;
+  left: 40px;
+  background: white;
+  transform: scale(1);
+  animation: success-anim 700ms ease;
+}
+
+.circle-border {
+  z-index: 0;
+  position: absolute;
+  left: 40px;
+  transform: scale(1.1);
+  animation: circle-anim 400ms ease;
+  background: red;	
+}
+
+@keyframes success-anim {
+  0% {
+    transform: scale(0);
+  }
+  30% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes circle-anim {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+.error::before,
+.error::after {
+  content: "";
+  display: block;
+  height: 4px;
+  background: red;
+  position: absolute;
+}
+
+.error::before {
+  width: 40px;
+  top: 48%;
+  left: 16%;
+  transform: rotateZ(50deg);
+}
+
+.error::after {
+  width: 40px;
+  top: 48%;
+  left: 16%;
+  transform: rotateZ(-50deg);
+}
+  .wrapper{
+    position: relative;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 10px 10px rgba(#000, 0.05);
+  }
+  *{padding:0;margin:0}
+  .wrapper{display:flex;justify-content:center;align-items:center;background-color:#eee}.checkmark__circle{stroke-dasharray: 166;stroke-dashoffset: 166;stroke-width: 2;stroke-miterlimit: 10;stroke: #7ac142;fill: none;animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards}.checkmark{width: 56px;height: 56px;border-radius: 50%;display: block;stroke-width: 2;stroke: #fff;stroke-miterlimit: 10;margin: 10% auto;box-shadow: inset 0px 0px 0px #7ac142;animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both}.checkmark__check{transform-origin: 50% 50%;stroke-dasharray: 48;stroke-dashoffset: 48;animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards}@keyframes stroke{100%{stroke-dashoffset: 0}}@keyframes scale{0%, 100%{transform: none}50%{transform: scale3d(1.1, 1.1, 1)}}@keyframes fill{100%{box-shadow: inset 0px 0px 0px 30px #7ac142}}
+  /* Style for the buttons */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  width: 150px;
+}
+
+/* Green button */
+.green-button {
+  background-color: #4caf50;
+  color: white;
+}
+
+/* Purple button */
+.purple-button {
+  background-color: #800080;
+  color: white;
+}
+
+/* Red button */
+.red-button {
+  background-color: #ff0000;
+  color: white;
+  width: 100%; /* Full width for the cancel button */
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  .button {
+    width: 100%; /* Make buttons full width on smaller screens */
+  }
+}
+/* Style for the disabled buttons */
+.button:disabled {
+  background-color: #ccc; /* Grey background color for disabled buttons */
+  color: #666; /* Darker text color for disabled buttons */
+  cursor: not-allowed; /* Change cursor to 'not-allowed' for disabled buttons */
+}
+
+</style>
+
+<!--POP UP PAYMENT-->
+  <body>
+<script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/flipclock/0.7.7/flipclock.js'></script><script  src="./script.js"></script>
+<script
+src="https://kit.fontawesome.com/bb515311f9.js" crossorigin="anonymous"></script>
+<script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
+<script type='text/javascript' src='#'></script>
+<script type='text/javascript' src='#'></script>
+<script type='text/javascript' src='#'></script>
+<script type='text/javascript'>#</script>
+<script type='text/javascript'>var myLink = document.querySelector('a[href="#"]');
+myLink.addEventListener('click', function(e) {
+  e.preventDefault();
+});</script>
+<script>
+  (function() {
+    var countdown, init_countdown, set_countdown;
+
+    countdown = init_countdown = function() {
+      countdown = new FlipClock($('.countdown'), {
+        clockFace: 'MinuteCounter',
+        language: 'en',
+        autoStart: false,
+        countdown: true,
+        showSeconds: true,
+        callbacks: {
+          start: function() {
+            return console.log('The clock has started!');
+          },
+          stop: function() {
+            return console.log('The clock has stopped!');
+          },
+          interval: function() {
+            var time;
+            time = this.factory.getTime().time;
+            if (time) {
+              return console.log('Clock interval', time);
+            }
+          }
+        }
+      });
+      return countdown;
+    };
+
+    set_countdown = function(minutes, seconds) {
+      if (countdown.running) {
+        return;
+      }
+      var totalSeconds = minutes * 60 + seconds;
+      countdown.setTime(totalSeconds);
+      return countdown.start();
+    };
+
+    init_countdown();
+
+    set_countdown(1, 30); // Set countdown for 1 minute and 30 seconds
+
+  }).call(this);
+</script>
+<script src="scripts/checkit.js"></script>
+
+</html>
