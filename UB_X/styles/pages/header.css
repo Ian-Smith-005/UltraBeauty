@@ -206,17 +206,30 @@
         }
     }
 
-       /* cookie banner styles go here */
-       #cookie-banner {
-        display: none;
+       
+    .cookie-consent {
+        background-color: #333;
+        color: white;
+        padding: 15px;
         position: fixed;
         bottom: 0;
         left: 0;
-        right: 0;
-        background: #333;
-        color: #fff;
-        padding: 10px;
+        width: 100%;
         text-align: center;
     }
-
-  
+    
+    .buttons button {
+        margin: 0 10px;
+        padding: 10px 20px;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+    }
+    
+    #message {
+        margin-top: 10px;
+    }
+    
+    #message.error {
+        color: red;
+    }

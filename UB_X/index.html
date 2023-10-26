@@ -2249,26 +2249,15 @@ right: 70px;
         </div>
         
     </div>
-    <table class="table table-striped table-borderless">
-        <thead style="background-color:#84B0CA ;" class="text-white">
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Description</th>
-                <th scope="col">Qty</th>
-                <th scope="col">Unit Price</th>
-                <th scope="col">Amount</th>
-            </tr>
-        </thead>
-        <tbody id="invoiceBody">
-            <!-- Rows will be dynamically added here -->
-        </tbody>
-    </table>
-    
     <!--Product-->
     <!--Cookie-->
-    <div id="cookie-banner">
-                <p>This website uses cookies. By continuing to use this site, you accept our use of cookies.</p>
-                <button id="accept-cookies">Accept</button>
+    <div class="cookie-consent">
+        <p>This website uses cookies to ensure you get the best experience on our website.</p>
+        <div class="buttons">
+            <button id="accept-btn">Accept</button>
+            <button id="reject-btn">Reject</button>
+        </div>
+        <div class="message" id="message"></div>
     </div>
     <!--Cookie-->
     <!--Overlay cart-->
