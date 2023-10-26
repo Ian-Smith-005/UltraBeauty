@@ -8,7 +8,7 @@
     body{
         height: 100vh;
         background-color: #000;
-        background-image: url('https://cdn.pixabay.com/photo/2018/04/03/20/26/woman-3287956_1280.jpg');
+        background-image: url('https://images.unsplash.com/photo-1511923199659-1c16881689de?auto=format&fit=crop&q=80&w=2098&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -206,30 +206,17 @@
         }
     }
 
-       
-    .cookie-consent {
-        background-color: #333;
-        color: white;
-        padding: 15px;
+       /* cookie banner styles go here */
+       #cookie-banner {
+        display: none;
         position: fixed;
         bottom: 0;
         left: 0;
-        width: 100%;
+        right: 0;
+        background: #014e5a;
+        color: #fff;
+        padding: 10px;
         text-align: center;
     }
-    
-    .buttons button {
-        margin: 0 10px;
-        padding: 10px 20px;
-        cursor: pointer;
-        border: none;
-        border-radius: 5px;
-    }
-    
-    #message {
-        margin-top: 10px;
-    }
-    
-    #message.error {
-        color: red;
-    }
+
+   

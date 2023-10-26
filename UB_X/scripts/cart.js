@@ -34,7 +34,6 @@ function updateCart() {
     // Clear the cart
     cartDiv.innerHTML = "";
 
-  
     // Iterate through the cart items
     cartItems.forEach(function (item, index) {
         var cartItem = document.createElement("div");
@@ -80,7 +79,6 @@ function updateCart() {
         subtotal += item.price * item.quantity;
 
     });
-    
 
     // Update the subtotal, tax, total, and checkout button
     var subtotalElement = document.getElementById("subtotal");

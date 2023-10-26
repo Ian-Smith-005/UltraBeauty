@@ -254,3 +254,7 @@ color: #008b8b;
 input[type='date']{
 background: none;
 }
+.form-control::placeholder {
+  color: #999; /* Placeholder text color */
+  font-style: italic; /* Italicize the placeholder text */
+}
