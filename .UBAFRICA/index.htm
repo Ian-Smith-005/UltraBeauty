@@ -1,0 +1,896 @@
+        <!DOCTYPE html>
+        <html>
+        <head>
+                    <title>Ultra beauty</title>
+                    <link rel="icon" href="images/icons/ultra-mobile-logo.png" type="image/x-icon">
+                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+                    <link rel="stylesheet" type="text/css" href="styles/pages/footer.css">
+                    <link rel="stylesheet" type="text/css" href="styles/pages/nav-land.css">
+                    <link rel="stylesheet" type="text/css" href="styles/pages/products.css">
+                    <link rel="stylesheet" type="text/css" href="styles/pages/cart.css">
+                    <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css' rel='stylesheet'>
+                    <link href='https://use.fontawesome.com/releases/v5.8.1/css/all.css' rel='stylesheet'>
+                    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css'><link rel="stylesheet" href="./style.css">
+                    <link rel="stylesheet" type="text/css" href="styles/pages/landing.css">
+                    <link rel="preconnect" href="https://fonts.googleapis.com">
+                    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                    <link rel="preconnect" href="https://fonts.googleapis.com">
+                    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500&display=swap" rel="stylesheet">
+                    <link rel="preconnect" href="https://fonts.googleapis.com">
+                    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
+                    <link rel="stylesheet" href="styles/pages/submenu.css">
+        </head>
+
+        <style>
+              .landing-page {
+                position: relative;
+                background-image: url('images/icons/jake.jpg'); /* Replace with your image path */
+                background-repeat: no-repeat;
+                background-size: 100%; /* Adjust based on your image and design preference */
+                margin: 0;
+              }
+              
+              .landing-page::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-image: inherit;
+                filter: blur(5px); /* Adjust the blur value as needed */
+              }
+                .swiper-slide--one {
+                background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), url("images/product3.jpg") no-repeat 50% 50%/cover;
+                }
+
+
+                .swiper-slide--two {
+                background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), url("images/product4.jpg") no-repeat 50% 50%/cover;
+                }
+
+                .swiper-slide--three {
+                background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), url("images/product13.jpg") no-repeat 50% 50%/cover;
+                }
+
+                .swiper-slide--four {
+                background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), url("images/product14.jpg") no-repeat 50% 50%/cover;
+                }
+
+                .swiper-slide--five {
+                background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), url("images/product18.jpg") no-repeat 50% 50%/cover;
+                }
+
+                .top_bar{
+                background-color: #ffffff;
+                }
+
+                .header_main{
+                    background-color: #004658;
+                }
+
+                .main_nav{
+                    background-color: #ffffff;
+                }
+
+                header {
+                    background-color: none;
+                    color: #e81c4f;
+                    padding: 10px 0;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    font-size: 1.1rem;
+                    position: fixed;
+                    width: 100%;
+                    z-index: 999999;
+
+                }
+
+                .header-logo img{
+                    height: 100px;
+                    margin-left: 40px;
+                }
+
+                nav {
+                    display: flex;
+                    gap: .8rem;
+                    margin-right: 20px;
+                    
+                }
+                nav a{
+                    text-decoration: none;
+                    color: #e81c4f;
+                }
+
+                nav .nav-link {
+                text-decoration: none;
+                gap: .2px;
+                color: #e81c4f;
+
+                }
+                
+                .social-icons {
+                    margin-right: 30px;
+                    margin-left: 40px;
+                    display: flex;
+                    gap: 1.2rem;
+                    margin-top: 4px;
+                }
+                .latter{
+                display: flex;
+                    gap: 2rem;
+                    font-size: 1rem;
+                    margin-top: 5px;
+                }
+                .search-bar-section {
+                z-index: 99999999;
+                position: fixed;
+                top: -700px;
+                left: 50%;
+                transform: translateX(-50%);
+                height: 200px;
+                background-color: #fff;
+                text-align: center;
+                line-height: 200px;
+                width: 100%;
+                opacity: 0;
+                transition: top 0.9s ease, opacity 0.3s ease;
+                }
+
+                .search-bar-section.active {
+                top: 20px;
+                opacity: 1;
+                }
+
+
+                .search-bar-section input:focus{
+                outline: none;
+                }
+                .search-bar-section input{
+                width: 70%;
+                height: 40px;
+                font-size: 1.2rem;
+                padding-left: 60px;
+                background: none;
+                border: none;
+                border-bottom: 4px solid #e81c4f;
+                }
+                .fa-magnifying-glass{
+                cursor: pointer;
+                }
+                .fa-bag-shopping{
+                    font-size: 1.4rem;
+                }
+
+                    .hamburger-menu {
+                width: 30px;
+                height: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                cursor: pointer;
+                margin-right: 40px;
+                margin-top: 10px;
+                margin-left: 2px;
+            }
+            
+            .hamburger-menu span {
+                display: block;
+                width: 100%;
+                height: 3px;
+                background-color: #e81c4f;
+                transition: transform 0.3s ease;
+            }
+            
+            .hamburger-menu.active span:nth-child(1) {
+                transform: translateY(7px) rotate(45deg);
+            }
+            
+            .hamburger-menu.active span:nth-child(2) {
+                transform: translateY(-1px) scaleX(0);
+            }
+            
+            .hamburger-menu.active span:nth-child(3) {
+                transform: translateY(-7px) rotate(-45deg);
+            }
+            
+            .social-link {
+                display: inline-block;
+                margin-right: 10px;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+            
+            .social-link i {
+                display: inline-block;
+            }
+            
+            .social-link:hover i {
+                animation: marquee .4s linear ; 
+            }
+            
+            @keyframes marquee {
+                0% {
+                    transform: translateY(-100%);
+                }
+                100% {
+                    transform: translateY(100%);
+                }
+            }
+            
+            
+            .nav-link {
+                position: relative;
+                text-decoration: none;
+                color: #e81c4f;
+                margin-right: 10px;
+                padding-bottom: 5px;
+            }
+            
+            .nav-link::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0;
+                height: 2px;
+                background-color: #e81c4f;
+                transition: width 0.3s ease; 
+            }
+            
+            .nav-link:hover::after,
+            .nav-link.active::after {
+                width: 100%; 
+            }
+            
+            .nav-link.active::after {
+                background-color: #e81c4f; 
+                transform-origin: right;
+                transition: transform 0.3s ease, width 0.3s ease;
+                color:#e81c4f;
+            }
+            
+            .nav-link.active:hover::after {
+                transform-origin: left;
+                width: 100%; /* Keep the active link line full width on hover */
+            }
+            .header-container{
+                background: transparent;
+            }
+            .header-container.scrolled {
+        background-color: rgba(255, 255, 255, 0.9); 
+        transition: background-color 0.9s ease;
+    }
+
+
+        </style>
+
+<body>
+     <!--Pleminary Header-->
+           <div class="content-body">
+                   <body className='snippet-body'>
+                        <div class="super_container">
+                <!-- Header -->
+                            <header class="header-container">
+                                <div class="header-logo">
+                                    <img src="images/icons/logo.png" alt="Logo">
+                                </div>
+                                <!--nav-->
+                                <nav> 
+                                    
+                                     <a href="#" class="nav-link active">Home</a>
+                                    <a href="#flex-container" class="nav-link">Facials</a>
+                                    <a href="about us.html" class="nav-link">Skin</a>
+                                    <a href="account.html" class="nav-link">Body </a>      
+                                  
+                                    
+                                <!--icons-->
+                                <div class="social-icons">
+                                    <a href="https://web.facebook.com/ultrabeautyafrica/" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="https://www.instagram.com/ultrabeauty_africa" class="social-link"><i class="fab fa-instagram"></i></a>
+                                    <a href="https://wa.me/c/254746668619" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                                    <a href="tel:+254746668619" class="social-link"><i class="fas fa-phone"></i></a>
+                                </div>
+                                <!--additional icons-->
+                                <div class="latter">
+                                    <i id="toggleSearch" class="fa-solid fa-magnifying-glass"></i>
+                                    <i id="open-overlay-btn" class="fa-solid fa-bag-shopping"></i>
+                                    <!--<div class="cart_count" ><span class="counter" id="product-counter"></span></div>-->
+                                </div>  
+                                <!--hamburger-->
+                                <div class="hamburger-menu" id="resizeMenu" onclick="openHamburger()">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                </nav>   
+                            </header>
+             <!-- Header -->
+                <div class="search-bar-section">
+                    <input id="search-input" type="text" required placeholder="Search Item...">
+                    <i id="closeSearch" class="fa-solid fa-xmark"></i>
+                    <div id="search-results" class="results">
+                    <!--Search Content Results-->
+                    </div>
+                </div>
+                         </div>
+                   </body>
+         </div>
+     <!--Pleminary Header-->
+<!--Other Menu-->
+    <div class="resizable-menu" id="sidemenu">
+        <div class="centered-div">
+            <h4>Ultra Beauty</h4>
+            <nav> 
+                <label for="btn-1" class="button">Courses 
+                    <span class="fa fa-caret-down"></span> 
+                </label> 
+                <input type="checkbox" id="btn-1">
+                <ul class="menu"> 
+                    <li><a href="#">Java</a></li>
+                    <li> 
+                        <label for="btn-1-2" class="first">Designer 
+                            <span class="fa fa-caret-down"></span> 
+                        </label> 
+                        <input type="checkbox" id="btn-1-2"> 
+                        <ul> 
+                            <li><a href="#">Graphic Designer</a></li>
+                            <li><a href="#">UI/UX Developer</a></li>
+                        </ul> 
+                    </li> 
+                    <li> 
+                        <label for="btn-1-3" class="second">App Development 
+                            <span class="fa fa-caret-down"></span>
+                        </label> 
+                        <input type="checkbox" id="btn-1-3"> 
+                        <ul> 
+                            <li><a href="#">Android</a></li> 
+                            <li><a href="#">iOS</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">PHP</a></li>
+                </ul>
+            </nav>
+        
+            <nav> 
+                <label for="btn-2" class="button">Courses 
+                    <span class="fa fa-caret-down"></span> 
+                </label> 
+                <input type="checkbox" id="btn-2">
+                <ul class="menu"> 
+                    <li><a href="#">Java 2</a></li>
+                    <li> 
+                        <label for="btn-2-2" class="first">Designer 2 
+                            <span class="fa fa-caret-down"></span> 
+                        </label> 
+                        <input type="checkbox" id="btn-2-2"> 
+                        <ul> 
+                            <li><a href="#">Graphic Designer 2</a></li>
+                            <li><a href="#">UI/UX Developer 2</a></li>
+                        </ul> 
+                    </li> 
+                    <li> 
+                        <label for="btn-2-3" class="second">App Development 2
+                            <span class="fa fa-caret-down"></span>
+                        </label> 
+                        <input type="checkbox" id="btn-2-3"> 
+                        <ul> 
+                            <li><a href="#">Android</a></li> 
+                            <li><a href="#">iOS</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">PHP</a></li>
+                </ul>
+            </nav>
+        
+            <nav> 
+                <label for="btn-5" class="button">Courses 
+                    <span class="fa fa-caret-down"></span> 
+                </label> 
+                <input type="checkbox" id="btn-5">
+                <ul class="menu"> 
+                    <li><a href="#">Java 2</a></li>
+                    <li> 
+                        <label for="btn-5-2" class="first">Designer 2 
+                            <span class="fa fa-caret-down"></span> 
+                        </label> 
+                        <input type="checkbox" id="btn-5-2"> 
+                        <ul> 
+                            <li><a href="#">Graphic Designer 2</a></li>
+                            <li><a href="#">UI/UX Developer 2</a></li>
+                        </ul> 
+                    </li> 
+                    <li> 
+                        <label for="btn-5-3" class="second">App Development 2
+                            <span class="fa fa-caret-down"></span>
+                        </label> 
+                        <input type="checkbox" id="btn-5-3"> 
+                        <ul> 
+                            <li><a href="#">Android</a></li> 
+                            <li><a href="#">iOS</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">PHP</a></li>
+                </ul>
+            </nav>
+        
+            <nav> 
+                <label for="btn-6" class="button">Courses 
+                    <span class="fa fa-caret-down"></span> 
+                </label> 
+                <input type="checkbox" id="btn-6">
+                <ul class="menu"> 
+                    <li><a href="#">Java 2</a></li>
+                    <li> 
+                        <label for="btn-6-2" class="first">Designer 2 
+                            <span class="fa fa-caret-down"></span> 
+                        </label> 
+                        <input type="checkbox" id="btn-6-2"> 
+                        <ul> 
+                            <li><a href="#">Graphic Designer 2</a></li>
+                            <li><a href="#">UI/UX Developer 2</a></li>
+                        </ul> 
+                    </li> 
+                    <li> 
+                        <label for="btn-6-3" class="second">App Development 2
+                            <span class="fa fa-caret-down"></span>
+                        </label> 
+                        <input type="checkbox" id="btn-6-3"> 
+                        <ul> 
+                            <li><a href="#">Android</a></li> 
+                            <li><a href="#">iOS</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">PHP</a></li>
+                </ul>
+            </nav>
+        
+            <nav> 
+                <label for="btn-7" class="button">Courses 
+                    <span class="fa fa-caret-down"></span> 
+                </label> 
+                <input type="checkbox" id="btn-7">
+                <ul class="menu"> 
+                    <li><a href="#">Java 2</a></li>
+                    <li> 
+                        <label for="btn-7-2" class="first">Designer 2 
+                            <span class="fa fa-caret-down"></span> 
+                        </label> 
+                        <input type="checkbox" id="btn-7-2"> 
+                        <ul> 
+                            <li><a href="#">Graphic Designer 2</a></li>
+                            <li><a href="#">UI/UX Developer 2</a></li>
+                        </ul> 
+                    </li> 
+                    <li> 
+                        <label for="btn-7-3" class="second">App Development 2
+                            <span class="fa fa-caret-down"></span>
+                        </label> 
+                        <input type="checkbox" id="btn-7-3"> 
+                        <ul> 
+                            <li><a href="#">Android</a></li> 
+                            <li><a href="#">iOS</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">PHP</a></li>
+                </ul>
+            </nav>
+        
+            <nav> 
+                <label for="btn-8" class="button">Courses 
+                    <span class="fa fa-caret-down"></span> 
+                </label> 
+                <input type="checkbox" id="btn-8">
+                <ul class="menu"> 
+                    <li><a href="#">Java 2</a></li>
+                    <li> 
+                        <label for="btn-8-2" class="first">Designer 2 
+                            <span class="fa fa-caret-down"></span> 
+                        </label> 
+                        <input type="checkbox" id="btn-8-2"> 
+                        <ul> 
+                            <li><a href="#">Graphic Designer 2</a></li>
+                            <li><a href="#">UI/UX Developer 2</a></li>
+                        </ul> 
+                    </li> 
+                    <li> 
+                        <label for="btn-8-3" class="second">App Development 2
+                            <span class="fa fa-caret-down"></span>
+                        </label> 
+                        <input type="checkbox" id="btn-8-3"> 
+                        <ul> 
+                            <li><a href="#">Android</a></li> 
+                            <li><a href="#">iOS</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">PHP</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+     <!--Dropdown Header-->
+   
+</body>    
+<!--Scripts-->
+        <script src="scripts/cart.js"></script>
+        <script src="scripts/index.js"></script>
+        <script src="scripts/over-cart.js"></script>
+        <script src="scripts/cookies.js"></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js'></script>
+        <script  src="./script.js"></script>
+         <script src="mpesa_stk_push.php"></script>
+         <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+         <script src="https://kit.fontawesome.com/f3068f95b3.js" crossorigin="anonymous"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+         <script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js'></script>
+         <script type='text/javascript' src='#'></script>
+         <script type='text/javascript' src='#'></script>
+         <script type='text/javascript' src='#'></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+         <script>
+            var swiper = new Swiper(".swiper", {
+            effect: "coverflow",
+           grabCursor: true,
+           centeredSlides: true,
+            coverflowEffect: {
+            rotate: 0,
+            stretch: 0,
+            depth: 100,
+            modifier: 3,
+            slideShadows: true
+        },
+        keyboard: {
+            enabled: true
+        },
+        mousewheel: {
+            thresholdDelta: 70
+        },
+        loop: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true
+        },
+        breakpoints: {
+            640: {
+            slidesPerView: 2
+            },
+            768: {
+            slidesPerView: 1
+            },
+            1024: {
+            slidesPerView: 2
+            },
+            1560: {
+            slidesPerView: 3
+            }
+        }
+        });
+        
+        //search input function
+                document.addEventListener("DOMContentLoaded", function () {
+            var searchInput = document.getElementById("search-input");
+            var searchButton = document.getElementById("search-button");
+            var searchResults = document.getElementById("search-results");
+        
+            function updateSearchResults() {
+                var searchTerm = searchInput.value.trim().toLowerCase();
+                searchResults.innerHTML = "";
+        
+                if (searchTerm === "") {
+                    searchResults.innerHTML = `<p>Type in the input to see products.</p>`;
+                    return;
+                }
+        
+                var products = document.querySelectorAll(".product");
+                var foundResults = false;
+        
+                products.forEach(function (product, index) {
+                    var titleElement = product.querySelector("h3");
+                    var title = titleElement.textContent.toLowerCase();
+        
+                    if (title.includes(searchTerm)) {
+                        var resultItem = document.createElement("div");
+                        resultItem.className = "search-result";
+                        var boldPart = title.slice(0, searchTerm.length);
+                        var restOfTitle = title.slice(searchTerm.length);
+                        resultItem.innerHTML = `<a href="#product-${index}"><strong>${boldPart}</strong>${restOfTitle}</a><br>`;
+                        searchResults.appendChild(resultItem);
+                        foundResults = true;
+        
+                        // Scroll to the product when the result item is clicked
+                        resultItem.querySelector("a").addEventListener("click", function (e) {
+                            e.preventDefault();
+                            // Scroll smoothly to the product using JavaScript
+                            product.scrollIntoView({ behavior: "smooth" });
+                            // Highlight the product title
+                            titleElement.style.backgroundColor = "#673AB7";
+                            titleElement.style.padding = "5px";
+                            titleElement.style.marginTop = "5px";
+                            titleElement.style.color = "#fff";
+                            titleElement.style.borderRadius = "5px";
+                            titleElement.style.animation = "found";
+                            titleElement.style.animationDuration = "4s";
+                            titleElement.style.animationPlayState = "ease-in-out";
+                        });
+                    }
+                });
+        
+                if (!foundResults) {
+                    searchResults.innerHTML = `<p>No matching items found.</p>`;
+                }
+            }
+        
+            // Initiate search when typing starts
+            searchInput.addEventListener("input", function () {
+                updateSearchResults();
+            });
+        
+            // Search with Enter button
+            searchInput.addEventListener("keyup", function (event) {
+                if (event.key === "Enter") {
+                    updateSearchResults();
+                }
+            });
+        
+            // Search button click event
+            searchButton.addEventListener("click", function () {
+                updateSearchResults();
+            });
+        });
+        
+    //header js function
+                const header = document.querySelector('.header-container');
+        
+        window.addEventListener('scroll', function() {
+        if (window.scrollY > 100) {
+        header.classList.add('scrolled');
+        } else {
+        header.classList.remove('scrolled');
+        }
+        });
+        
+          
+                document.getElementById("toggleSearch").addEventListener("click", function(event) {
+                    event.stopPropagation(); // Prevents the click event from reaching the document body
+                    var searchBar = document.querySelector(".search-bar-section");
+                    searchBar.classList.toggle("active");
+                });
+                
+                document.getElementById("closeSearch").addEventListener("click", function(event) {
+                    event.stopPropagation(); // Prevents the click event from reaching the document body
+                    var searchBar = document.querySelector(".search-bar-section");
+                    searchBar.classList.remove("active");
+                });
+                
+                
+                
+              
+                     const hamburgerMenu = document.querySelector('.hamburger-menu');
+                
+                hamburgerMenu.addEventListener('click', function() {
+                    hamburgerMenu.classList.toggle('active');
+                });
+                
+        </script>
+            <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+            <script type='text/javascript'>
+                $(document).ready(function(){
+                    $('[id^=btn-]').change(function() {
+                        $(this).siblings('.menu').toggle();
+                        $(this).siblings('.button').find('.fa-caret-down').toggleClass("rotate");
+                    });
+                });
+            </script>
+            <script type='text/javascript'>
+                var myLink = document.querySelector('a[href="#"]');
+                myLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                });
+            </script>
+            <script>
+                $(document).ready(function(){
+                    $('.main-menu').click(function(){
+                        $(this).toggleClass('active'); // Toggle active class on main menu click
+                    });
+                });
+            </script>
+                <script>
+                    function openHamburger() {
+                        var resizableMenu = document.getElementById('sidemenu');
+                        if (resizableMenu.classList.contains('active')) {
+                            resizableMenu.classList.remove('active');
+                            resizableMenu.classList.add('inactive');
+                        } else {
+                            resizableMenu.classList.toggle('active');
+                            resizableMenu.classList.remove('inactive');
+                        }
+                    }
+                </script>
+                <script>
+                    // Function to save cart data to localStorage
+function saveCartToStorage() {
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+}
+
+// Function to load cart data from localStorage
+function loadCartFromStorage() {
+    var storedCartItems = localStorage.getItem("cartItems");
+    if (storedCartItems) {
+        cartItems = JSON.parse(storedCartItems);
+        updateCart();
+    }
+}
+
+var cartItems = [];
+
+// Function to count the number of products in the cart
+function countProductsInCart() {
+    var productCount = cartItems.length;
+
+    // Display the product count
+    var productCountElement = document.getElementById("product-counter");
+    productCountElement.textContent = productCount;
+}
+
+// Call the function to initially display the product count
+countProductsInCart();
+
+// Update the cart and product count whenever the cart changes
+function updateCart() {
+    var cartDiv = document.querySelector(".cart");
+    var subtotal = 0;
+
+    // Clear the cart
+    cartDiv.innerHTML = "";
+
+    // Iterate through the cart items
+    cartItems.forEach(function (item, index) {
+        var cartItem = document.createElement("div");
+        cartItem.classList.add("cart-item");
+
+        cartItem.innerHTML = `
+        <div class="row d-flex justify-content-center border-top">
+<div class="col-5">
+    <div class="row d-flex">
+        <div class="book">
+            <img src="${item.image}" class="book-img">
+        </div>
+        <div class="my-auto flex-column d-flex pad-left">
+            <h6 class="mob-text">${item.title}</h6>
+            <p class="mob-text">${item.description}</p>
+        </div>
+    </div>
+</div>
+<div class="my-auto col-7">
+    <div class="row text-right">
+        <div class="col-4">
+            <p class="mob-text">${item.currency} ${item.price.toFixed(2)}</p>
+        </div>
+        <div class="col-4">
+            <div class="row d-flex justify-content-end px-3">
+                <p class="mb-0" id="center-text">${item.quantity}</p>
+                <div class="d-flex flex-column plus-minus">
+                    <span class="vsm-text plus" onclick="increaseQuantity(${index}, ${item.price})">+</span>
+                    <span class="vsm-text minus" onclick="decreaseQuantity(${index}, ${item.price})">-</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <h6 class="mob-text">${item.currency} ${(item.price * item.quantity).toFixed(2)}</h6>
+            <i class="fa-solid fa-xmark" onclick="toggleCartItem(${index})"></i>
+        </div>
+    </div>
+</div>
+</div>
+        `;
+
+        cartDiv.appendChild(cartItem);
+        subtotal += item.price * item.quantity;
+
+    });
+
+    // Update the subtotal, tax, total, and checkout button
+    var subtotalElement = document.getElementById("subtotal");
+    var totalElement = document.getElementById("total");
+    var checkoutAmount = document.getElementById("check-amt");
+    var outputPriceElement = document.getElementById("output_price"); // New line added
+
+    var tax = 200; // Assuming a 6% tax rate
+    var total = subtotal + tax;
+
+    subtotalElement.textContent = `KSH ${subtotal.toFixed(2)}`;
+    totalElement.textContent = `KSH ${total.toFixed(2)}`;
+    checkoutAmount.textContent = `KSH ${total.toFixed(2)}`;
+    outputPriceElement.textContent = `${total.toFixed(2)}`; // Set the inner text of output_price
+    // Save the cart data to localStorage
+    saveCartToStorage();
+
+    // Call the product counter function to update the product count
+    countProductsInCart();
+}
+// Function to toggle the visibility of a cart item
+function toggleCartItem(index) {
+// Remove the product from the cartItems array
+cartItems.splice(index, 1);
+// Update the cart display
+updateCart();
+}
+
+// Function to add a product to the cart
+function addToCart(button) {
+var productDetails = button.parentElement;
+var title = productDetails.querySelector(".title").textContent;
+var description = productDetails.querySelector(".description").textContent;
+var price = parseFloat(productDetails.querySelector(".price").textContent);
+var currency = productDetails.querySelector(".currency").textContent;
+var image = productDetails.parentElement.querySelector(".image img").src;
+var selectedQuantity = parseInt(productDetails.querySelector(".prices span.active").textContent); // Get the selected quantity
+
+var existingItemIndex = cartItems.findIndex(item => item.title === title);
+
+if (existingItemIndex !== -1) {
+cartItems[existingItemIndex].quantity += selectedQuantity; // Add the selected quantity
+} else {
+cartItems.push({
+    title: title,
+    description: description,
+    price: price,
+    quantity: selectedQuantity, // Set the quantity to the selected quantity
+    currency: currency,
+    image: image
+});
+}
+
+updateCart();
+}
+
+// Function to increase quantity
+function increaseQuantity(index, price) {
+    if (index >= 0 && index < cartItems.length) {
+        cartItems[index].quantity++;
+    }
+
+    updateCart();
+}
+
+// Function to decrease quantity
+function decreaseQuantity(index, price) {
+    if (index >= 0 && index < cartItems.length && cartItems[index].quantity > 1) {
+        cartItems[index].quantity--;
+    }
+
+    updateCart();
+}
+
+// Function to select quantity
+function selectPrice(span) {
+var selectedQuantity = parseInt(span.textContent);
+var priceSpan = span.parentElement.parentElement.querySelector(".price");
+var price = parseFloat(priceSpan.textContent);
+var currencySpan = span.parentElement.parentElement.querySelector(".currency");
+var currency = currencySpan.textContent;
+
+// Set the selected quantity
+var selectedQuantitySpan = span.parentElement.parentElement.querySelector(".selected-quantity");
+selectedQuantitySpan.textContent = selectedQuantity;
+
+// Update the total price
+var totalSpan = span.parentElement.parentElement.querySelector(".total-price");
+var totalPrice = selectedQuantity * price;
+totalSpan.textContent = `${currency} ${totalPrice.toFixed(2)}`;
+}
+
+
+
+loadCartFromStorage();
+// Initialize the cart
+updateCart();
+
+                </script>
+        
+<!--Scripts-->
+        </body>
+        </html>

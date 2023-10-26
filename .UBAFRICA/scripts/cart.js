@@ -14,35 +14,14 @@ function loadCartFromStorage() {
 
 var cartItems = [];
 
-// Initial product count
-var productCount = 0;
+// Function to count the number of products in the cart
+function countProductsInCart() {
+    var productCount = cartItems.length;
 
-// Function to update and display the product count
-function updateProductCount() {
+    // Display the product count
     var productCountElement = document.getElementById("product-counter");
     productCountElement.textContent = productCount;
 }
-
-// Function to increment the product count
-function addToCart() {
-    // Logic to add a product to the cart
-    productCount++;
-    updateProductCount();
-}
-
-// Function to decrement the product count (for example, when removing a product from the cart)
-function removeFromCart() {
-    // Logic to remove a product from the cart
-    if (productCount > 0) {
-        productCount--;
-        updateProductCount();
-    }
-}
-
-// Example usage
-addToCart(); // Adds a product to the cart
-addToCart(); // Adds another product to the cart
-removeFromCart(); // Removes a product from the cart
 
 // Call the function to initially display the product count
 countProductsInCart();
