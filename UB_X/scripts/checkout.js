@@ -19,7 +19,6 @@ function calculateTotal() {
 function displayReceiptSummary() {
     var subtotalElement = document.getElementById("subtotal");
     var totalElement = document.getElementById("total");
-    var totalElements = document.getElementById("totals");
 
     var subtotal = calculateTotal();
     var shippingCost = 200; // Fixed shipping cost
@@ -27,7 +26,6 @@ function displayReceiptSummary() {
 
     subtotalElement.textContent = `KSH ${subtotal.toFixed(2)}`;
     totalElement.textContent = `KSH ${total.toFixed(2)}`;
-    totalElements.textContent = `KSH ${total.toFixed(2)}`;
 }
 
 // Load cart data from localStorage

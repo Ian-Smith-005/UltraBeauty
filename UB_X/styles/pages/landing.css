@@ -88,7 +88,7 @@
         }
         p a:hover
         {
-        color: #FFFFFF;
+        color: #ffffff;
         background: #ffa07f;
         }
         p a:hover::after
@@ -366,7 +366,7 @@
         }
         .standard_dropdown li a:hover
         {
-        color: #0e8ce4;
+        color:#000000;
         }
         .standard_dropdown li a i
         {
@@ -387,7 +387,7 @@
         width: auto;
         visibility: hidden;
         opacity: 0;
-        background: #FFFFFF;
+        background: #e81c4f;
         box-shadow: 0px 10px 25px rgba(0,0,0,0.1);
         -webkit-transition: opacity 0.3s ease;
         -moz-transition: opacity 0.3s ease;
@@ -708,43 +708,7 @@
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px;
         }
-        .wishlist_cart
-        {
-        height: 90px;
-        }
-        .wishlist
-        {
-        margin-right: 50px;
-        }
-        .wishlist_icon img
-        {
-        width: 100%;
-        }
-        .wishlist_content
-        {
-        margin-left: 14px;
-        }
-        .wishlist_text a
-        {
-        font-size: 18px;
-        font-weight: 400;
-        color: #000000;
-        -webkit-transition: all 200ms ease;
-        -moz-transition: all 200ms ease;
-        -ms-transition: all 200ms ease;
-        -o-transition: all 200ms ease;
-        transition: all 200ms ease;
-        }
-        .wishlist_text a:hover
-        {
-        color: #0e8ce4;
-        }
-        .wishlist_count
-        {
-        margin-top: -2px;
-        color: #a3a3a3;
-        font-size: 14px;
-        }
+        
         .cart_count
         {
         position: absolute;
@@ -794,7 +758,7 @@
         .cart_price
         {
         font-size: 14px;
-        color: #a3a3a3;
+        color: #ffffff;
         margin-top: -2px;
         }
 
@@ -970,7 +934,7 @@
         {
         font-size: 18px;
         font-weight: 400;
-        color: #a19a9a;
+        color: #ffffff;
         line-height: 60px;
         }
         .main_nav_dropdown li li
@@ -1053,7 +1017,7 @@
         .page_menu_item > a
         {
         display: block;
-        color: #FFFFFF;
+        color: #dddddd;
         font-weight: 500;
         height: 50px;
         line-height: 50px;
