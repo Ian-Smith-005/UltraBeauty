@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ultra Beauty About Us</title>
+    <!-- Font Awesome CDN-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Stylesheet -->
+    <link rel="icon" href="images/icons/ultra-mobile-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles/pages/footer.css">
+    <link rel="stylesheet" type="text/css" href="styles/pages/header.css">
+    <link rel="stylesheet" type="text/css" href="styles/pages/products.css">
+    <link rel="stylesheet" type="text/css" href="styles/pages/cart.css">
+    <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css' rel='stylesheet'>
+    <link href='https://use.fontawesome.com/releases/v5.8.1/css/all.css' rel='stylesheet'>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css'><link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="styles/pages/landing.css">
+    <link href='https://use.fontawesome.com/releases/v5.8.1/css/all.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/f3068f95b3.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+  </head>
+  <style>
+       
+
+    .swiper-slide--one {
+    background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), url("images/product3.jpg") no-repeat 50% 50%/cover;
+    }
+
+
+    .swiper-slide--two {
+    background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), url("images/product4.jpg") no-repeat 50% 50%/cover;
+    }
+
+    .swiper-slide--three {
+    background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), url("images/product13.jpg") no-repeat 50% 50%/cover;
+    }
+
+    .swiper-slide--four {
+    background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), url("images/product14.jpg") no-repeat 50% 50%/cover;
+    }
+
+    .swiper-slide--five {
+    background: linear-gradient(to top, #0f2027, #203a4300, #2c536400), url("images/product18.jpg") no-repeat 50% 50%/cover;
+    }
+
+    .top_bar{
+  background-color: #ffffff;
+    }
+
+    .header_main{
+        background-color: #004658;
+    }
+
+    .main_nav{
+        background-color: #ffffff;
+        color: white;
+    }
+ 
+
+
+.logo_container .logo{
+position: fixed;
+top: 90px;
+left: 90px;
+z-index: 999999999;
+
+}
+.cart-head{
+position: fixed;
+right: 160px;
+margin-top: 10px;
+}
+.wishlist_cart{
+width: 700px;
+position: relative;
+text-align: start;
+color: #fff;
+left:270px;
+}
+.has-subs{
+color: #fff;
+}
+.two{
+margin-right: 120px;
+right: 240px;
+}
+.three{
+margin-top: 20px;
+right: 290px;
+cursor: pointer;
+}
+.bottom-bar-clipse{
+height: 40px;
+width: 100%;
+background-color: #fff;
+position: fixed;
+top: 130px;
+z-index: 9999999;
+}
+
+                        .search-bar-section {
+            z-index: 99999999;
+            position: fixed;
+            top: -700px;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 200px;
+            background-color: #fff;
+            text-align: center;
+            line-height: 200px;
+            width: 100%;
+            opacity: 0;
+            transition: top 0.9s ease, opacity 0.3s ease;
+            }
+
+            .search-bar-section.active {
+            top: 20px;
+            opacity: 1;
+            }
+
+
+            .search-bar-section input:focus{
+            outline: none;
+            }
+            .search-bar-section input{
+            width: 70%;
+            height: 40px;
+            font-size: 1.2rem;
+            padding-left: 60px;
+            background: none;
+            border: none;
+            border-bottom: 4px solid #e81c4f;
+            }
+
+
+            * {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+.containeer {
+width: inherit;
+background: #004658;
+justify-content: space-between;
+align-items: center;
+overflow: hidden;
+position: fixed;
+
+}
+
+
+
+.hamburger {
+display: block;
+position: fixed;
+top: 90px;
+right: 70px;
+width: 30px;
+height: 23px;
+z-index: 999;
+
+cursor: pointer;
+}
+.hamburger.nav-open span:first-child {
+transform: rotate(135deg);
+top: 10px;
+}
+.hamburger.nav-open span:nth-child(2) {
+left: 100px;
+opacity: 0;
+}
+.hamburger.nav-open span:last-child {
+transform: rotate(-135deg);
+top: 10px;
+}
+.hamburger span {
+width: 100%;
+height: 3px;
+background: #ffffff;
+position: absolute;
+display: block;
+transition: all 0.3s;
+}
+.hamburger span:first-child {
+top: 0;
+}
+.hamburger span:nth-child(2) {
+top: 10px;
+left: 0;
+}
+.hamburger span:last-child {
+top: 20px;
+}
+
+.menu {
+width: 100%;
+height: calc(100vh - 70px);
+position: fixed;
+top: 150px;
+left: 100%;
+outline: 1px solid white;
+background:  #004658 ;  transition: all 0.5s;
+display: none;
+opacity: .9;
+}
+.menu.nav-open {
+left: 0;
+display: block;
+transition: all 0.3s;
+}
+.menu > li {
+position: relative;
+list-style: none;
+padding: 15px;
+border-bottom: 1px solid #44448ddc ;;
+}
+.menu > li > a {
+text-decoration: none;
+color: white;
+font-weight: 700;
+text-transform: uppercase;
+font-size: 0.9em;
+line-height: 1.4;
+}
+.menu > li > a.active::after {
+opacity: 1;
+}
+.menu > li > a::after {
+content: "";
+width: auto;
+height: auto;
+position: absolute;
+
+right: 50%;
+transform: translateY(-50%);
+border-right: 13px solid #00bef0 ;;
+border-top: 10px solid transparent;
+border-bottom: 10px solid transparent;
+display: block;
+opacity: 0;
+}
+
+.sub-menu {
+position: fixed;
+top: 150px;
+right: 0;
+width: 50%;
+height: calc(100vh - 70px);
+background: #004658 ;;
+overflow: auto;
+opacity: 0;
+z-index: -1;
+transition: opacity 0.3s ease-in-out;
+}
+
+.sub-menu.active {
+opacity: 1;
+z-index: 999;
+}
+.sub-menu li {
+list-style: none;
+padding: 15px 20px;
+font-size: 0.9em;
+border-bottom: 1px solid  #44448ddc ;  cursor: default;
+}
+.sub-menu li a {
+text-decoration: none;
+color: white;
+font-weight: 700;
+text-transform: uppercase;
+}
+.sub-menu li a:hover {
+color: gold;
+}
+.sub-menu .title {
+font-size: 1.4em;
+color: white;
+font-weight: 700;
+padding: 15px 15px 15px 15px;
+border-bottom: 1px solid white;
+}
+.sub-menu .links {
+display: flex;
+}
+@media screen and (max-width: 600px) {
+.sub-menu .links {
+flex-direction: column;
+}
+}
+.sub-menu .links li {
+padding: 5px 15px 5px 0;
+border: none;
+}
+.sub-menu .links li a {
+color: gold;
+font-size: 0.7em;
+}
+.sub-menu .links li a:hover {
+color: white;
+}
+@media screen and (max-width: 767px) {
+.sub-menu{
+    top: 230px;
+}
+.menu{
+    top: 230px;
+}
+}
+
+
+.landing-page {
+position: relative;
+background-image: url('images/icons/jake-peterson-VJ4pn_PSBLo-unsplash.jpg'); /* Replace with your image path */
+background-repeat: no-repeat;
+background-size: 100%; /* Adjust based on your image and design preference */
+margin: 0;
+}
+
+.landing-page::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-image: inherit;
+filter: blur(5px); /* Adjust the blur value as needed */
+}
+
+
+
+
+
+    </style>
+  <style>
+    * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+section {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.column {
+  width: 100%;
+  padding: 0 1em 1em 1em;
+  text-align: center;
+}
+.card {
+  width: 100%;
+  height: 100%;
+  padding: 2em 1.5em;
+  background: linear-gradient(#ffffff 50%, #2c7bfe 50%);
+  background-size: 100% 200%;
+  background-position: 0 2.5%;
+  border-radius: 5px;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  transition: 0.5s;
+}
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f194c;
+  margin: 1em 0;
+}
+p {
+  color: #575a7b;
+  font-size: 15px;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+}
+.icon-wrapper {
+  background-color: #2c7bfe;
+  position: relative;
+  margin: auto;
+  font-size: 30px;
+  height: 2.5em;
+  width: 2.5em;
+  color: #ffffff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  transition: 0.5s;
+}
+.card:hover {
+  background-position: 0 100%;
+}
+.card:hover .icon-wrapper {
+  background-color: #ffffff;
+  color: #2c7bfe;
+}
+.card:hover h3 {
+  color: #ffffff;
+}
+.card:hover p {
+  color: #f0f0f0;
+}
+@media screen and (min-width: 768px) {
+  section {
+    padding: 0 2em;
+  }
+  .column {
+    flex: 0 50%;
+    max-width: 50%;
+  }
+}
+@media screen and (min-width: 992px) {
+  section {
+    padding: 1em 3em;
+  }
+  .column {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+  }
+}
+  </style>
+  <body>
+        <!--Header Section-->
+        <div class="super_container">
+          <header class="header">
+                <div class="top_bar">
+                      <div class="container">
+                                  <div class="row">
+                                          <div class="col d-flex flex-row">
+                                                  <div class="top_bar_contact_item"><div class="top_bar_icon"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918577/phone.png" alt=""></div>+254746668619</div>
+                                                  <div class="top_bar_contact_item"><div class="top_bar_icon"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918597/mail.png" alt=""></div><a href="mailto:ultrabeautyafrica1@gmail.com">ultrabeautyafrica1@gmail.com</a></div>
+                                                  <div class="top_bar_content ml-auto">
+                                                      <div class="top_bar_menu">
+                                                          <ul class="standard_dropdown top_bar_dropdown">
+                                                          <li>
+                                                                  <a href="#">English<i class="fas fa-chevron-down"></i></a>
+                                                              
+                                                              </li>
+                                                              <li>
+                                                                  <a href="#">Ksh<i class="fas fa-chevron-down"></i></a>
+                                                              
+                                                              </li>
+                                                          </ul>
+                                                      </div>
+                                                  <div class="top_bar_user">
+                                                      <div class="user_icon"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918647/user.svg" alt=""></div>
+                                                      <div><a href="account.html">Register</a></div>
+                                                      <div><a href="account.html">Sign in</a></div>
+                                                  </div>
+                                                  </div>
+                                          </div>
+                                  </div>
+                      </div>		
+               </div>
+               <div class="header_main">
+                  <div class="container">
+                  <div class="row">
+                  <div class="col-lg-2 col-sm-3 col-3 order-1">
+                      <!--Logo-->
+                      <div class="logo_container">
+                          <div class="logo">
+                              <a href="#">
+                              <img src="images/icons/logo.png" alt="Ultra Beauty" width="100" height="auto" style="padding-top: 7px;margin-right: -50px;"> <!-- Adjust width and height accordingly -->
+                              </a>
+                          </div>                
+                      </div>
+                      <!--Logo-->
+                  </div>
+                  <!-- dropdown -->
+                  <div class="cart-head two">
+                      <div class="main_nav_menu">
+                          <ul class="standard_dropdown main_nav_dropdown">
+                              <li class="hassubs">
+                                  <a href="#">Multipurpose<i class="fas fa-chevron-down"></i></a>
+                                  <ul>
+                                      <li>
+                                          <a href="#">Lenovo<i class="fas fa-chevron-down"></i></a>
+                                          <ul>
+                                              <li><a href="#">Lenovo 1<i class="fas fa-chevron-down"></i></a></li>
+                                              <li><a href="#">Lenovo 3<i class="fas fa-chevron-down"></i></a></li>
+                                              <li><a href="#">Lenovo 2<i class="fas fa-chevron-down"></i></a></li>
+                                          </ul>
+                                      </li>
+                                      <li><a href="#">DELL<i class="fas fa-chevron-down"></i></a></li>
+                                      <li><a href="#">APPLE<i class="fas fa-chevron-down"></i></a></li>
+                                      <li><a href="#">HP<i class="fas fa-chevron-down"></i></a></li>
+                                  </ul>
+                              </li>
+                              <li class="hassubs">
+                                  <a href="#">Skin care<i class="fas fa-chevron-down"></i></a>
+                                  <ul>
+                                      <li>
+                                          <a href="#">Skin lighting<i class="fas fa-chevron-down"></i></a>
+                                          <ul>
+                                              <li><a href="#">Laptop<i class="fas fa-chevron-down"></i></a></li>
+                                              <li><a href="#">Mobiles<i class="fas fa-chevron-down"></i></a></li>
+                                              <li><a href="#">Ipads<i class="fas fa-chevron-down"></i></a></li>
+                                          </ul>
+                                      </li>
+                                      <li><a href="#">Samsung<i class="fas fa-chevron-down"></i></a></li>
+                                      <li><a href="#">Lenovo<i class="fas fa-chevron-down"></i></a></li>
+                                      <li><a href="#">DELL<i class="fas fa-chevron-down"></i></a></li>
+                                  </ul>
+                              </li>
+                              <li class="hassubs">
+                                  <a href="#">Enlargement<i class="fas fa-chevron-down"></i></a>
+                                  <ul>
+                                      <li><a href="shop.html">Shop<i class="fas fa-chevron-down"></i></a></li>
+                                      <li><a href="product.html">Product<i class="fas fa-chevron-down"></i></a></li>
+                                      <li><a href="blog.html">Blog<i class="fas fa-chevron-down"></i></a></li>
+                                      <li><a href="blog_single.html">Blog Post<i class="fas fa-chevron-down"></i></a></li>
+                                      <li><a href="regular.html">Regular Post<i class="fas fa-chevron-down"></i></a></li>
+                                      <li><a href="cart.html">Cart<i class="fas fa-chevron-down"></i></a></li>
+                                      <li><a href="contact.html">Contact<i class="fas fa-chevron-down"></i></a></li>
+                                  </ul>
+                              </li>
+                          
+                          </ul>
+                      </div>
+                  </div>
+                  <!-- dropdown -->
+                  <!-- search -->
+                  <div id="toggleSearch" class="cart-head three">
+                      <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918704/search.png" alt="">
+                  </div>
+                  <!-- search -->
+                  <!-- cart-head -->
+                  <div class="cart-head">
+                      <div class="cart_container d-flex flex-row align-items-center justify-content-end">
+                          <div class="cart_icon" id="open-overlay-btn">
+                              <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1560918704/cart.png" alt="">
+                              <div class="cart_count" ><span class="counter" id="product-counter">0</span></div>
+                          </div>
+                          <div class="cart_content">
+                              <div class="cart_text" id="open-overlay-btn"><a href="#" style="color: #00bef0;">Cart</a></div>
+                              <div class="cart_price" id="output_price">0.00</div>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- cart-head -->
+                  <!-- fullscreen dropdwon-head -->
+                  <div class="header">
+                      <div class="containeer">
+                        <nav class="header-nav">
+                          <ul class="menu">
+                            <li class="menu-sports has-submenu">
+                              <a href="#" id="sports" class="">Creams</a>
+                              <ul class="sub-menu" id="sports-sub">
+                                <h3 class="title">Men's Sports</h3>
+                                <li class="sub-title">
+                                  <a href="#">Baseball</a>
+                                  <ul class="links">
+                                    <li><a href="#">Schedule</a></li>
+                                    <li><a href="#">Roster</a></li>
+                                    <li><a href="#">News</a></li>
+                                  </ul>
+                                </li>
+                                <li class="sub-title">
+                                  <a href="#">Basketball</a>
+                                  <ul class="links">
+                                    <li><a href="#">Schedule</a></li>
+                                    <li><a href="#">Roster</a></li>
+                                    <li><a href="#">News</a></li>
+                                  </ul>
+                                </li>
+                                <li class="sub-title">
+                                  <a href="#">Cross Country</a>
+                                  <ul class="links">
+                                    <li><a href="#">Schedule</a></li>
+                                    <li><a href="#">Roster</a></li>
+                                    <li><a href="#">News</a></li>
+                                  </ul>
+                                </li>
+                                <li class="sub-title">
+                                  <a href="#">Football</a>
+                                  <ul class="links">
+                                    <li><a href="#">Schedule</a></li>
+                                    <li><a href="#">Roster</a></li>
+                                    <li><a href="#">News</a></li>
+                                  </ul>
+                                </li>
+                                <li class="sub-title">
+                                  <a href="#">Golf</a>
+                                  <ul class="links">
+                                    <li><a href="#">Schedule</a></li>
+                                    <li><a href="#">Roster</a></li>
+                                    <li><a href="#">News</a></li>
+                                  </ul>
+                                </li>
+                                <li class="sub-title">
+                                  <a href="#">Track & Field</a>
+                                  <ul class="links">
+                                    <li><a href="#">Schedule</a></li>
+                                    <li><a href="#">Roster</a></li>
+                                    <li><a href="#">News</a></li>
+                                  </ul>
+                                </li>
+                                <h3 class="title">Women's Sports</h3>
+                                <li class="sub-title">
+                                  <a href="#">Basketball</a>
+                                  <ul class="links">
+                                    <li><a href="#">Schedule</a></li>
+                                    <li><a href="#">Roster</a></li>
+                                    <li><a href="#">News</a></li>
+                                  </ul>
+                                </li>
+                                <li class="sub-title">
+                                  <a href="#">Cross Country</a>
+                                  <ul class="links">
+                                    <li><a href="#">Schedule</a></li>
+                                    <li><a href="#">Roster</a></li>
+                                    <li><a href="#">News</a></li>
+                                  </ul>
+                                </li>
+                                <li class="sub-title">
+                                  <a href="#">Golf</a>
+                                  <ul class="links">
+                                    <li><a href="#">Schedule</a></li>
+                                    <li><a href="#">Roster</a></li>
+                                    <li><a href="#">News</a></li>
+                                  </ul>
+                                </li>
+                                <li class="sub-title">
+                                  <a href="#">Rowing</a>
+                                  <ul class="links">
+                                    <li><a href="#">Schedule</a></li>
+                                    <li><a href="#">Roster</a></li>
+                                    <li><a href="#">News</a></li>
+                                  </ul>
+                                </li>
+                                <li class="sub-title">
+                                  <a href="#">Soccer</a>
+                                  <ul class="links">
+                                    <li><a href="#">Schedule</a></li>
+                                    <li><a href="#">Roster</a></li>
+                                    <li><a href="#">News</a></li>
+                                  </ul>
+                                </li>
+                                <li class="sub-title">
+                                  <a href="#">Softball</a>
+                                  <ul class="links">
+                                    <li><a href="#">Schedule</a></li>
+                                    <li><a href="#">Roster</a></li>
+                                    <li><a href="#">News</a></li>
+                                  </ul>
+                                </li>
+                                <li class="sub-title">
+                                  <a href="#">Swim & Dive</a>
+                                  <ul class="links">
+                                    <li><a href="#">Schedule</a></li>
+                                    <li><a href="#">Roster</a></li>
+                                    <li><a href="#">News</a></li>
+                                  </ul>
+                                </li>
+                                <li class="sub-title">
+                                  <a href="#">Tennis</a>
+                                  <ul class="links">
+                                    <li><a href="#">Schedule</a></li>
+                                    <li><a href="#">Roster</a></li>
+                                    <li><a href="#">News</a></li>
+                                  </ul>
+                                </li>
+                                <li class="sub-title">
+                                  <a href="#">Track & Field</a>
+                                  <ul class="links">
+                                    <li><a href="#">Schedule</a></li>
+                                    <li><a href="#">Roster</a></li>
+                                    <li><a href="#">News</a></li>
+                                  </ul>
+                                </li>
+                                <li class="sub-title">
+                                  <a href="#">Volleyball</a>
+                                  <ul class="links">
+                                    <li><a href="#">Schedule</a></li>
+                                    <li><a href="#">Roster</a></li>
+                                    <li><a href="#">News</a></li>
+                                  </ul>
+                                </li>
+                              </ul>  
+                            </li>
+                            <li class="has-submenu">
+                              <a href="#"> </a>
+                              <ul class="sub-menu">
+                                <h3 class="title">Buy Tickets</h3>
+                                <li><a href="#">My Account</a></li>
+                                <li><a href="#">Student</a></li> 
+                                <li><a href="#">Baseball</a></li> 
+                                <li><a href="#">Football</a></li> 
+                                <li><a href="#">Alumni</a></li> 
+                                <li><a href="#">Men's Basketball</a></li> 
+                                <li><a href="#">Women's Basketball</a></li> 
+                                <li><a href="#">Soccer</a></li> 
+                                <li><a href="#">Softball</a></li> 
+                                <li><a href="#">Volleyball</a></li> 
+                              </ul>
+                            </li>
+                            <li class="has-submenu">
+                              <a href="#">Tennessee Fund</a>
+                              <ul class="sub-menu">
+                                <h3 class="title">Information</h3>
+                                <li><a href="#">TennesseeFund.org</a></li>
+                                <li><a href="#">Premium Seats</a></li> 
+                                <li><a href="#">Parking Passes</a></li> 
+                                <li><a href="#">Make an Online Gift</a></li> 
+                                <li><a href="#">Season Tickets</a></li> 
+                                <li><a href="#">Athletic Hospitality & Rentals</a></li> 
+                                <li><a href="#">Tennessee Fund Staff</a></li>  
+                              </ul>
+                            </li>
+                            <li class="has-submenu">
+                              <a href="#">Fans</a>
+                              <ul class="sub-menu">
+                                <h3 class="title">Fans</h3>
+                                <li><a href="#">Gameday Information</a></li>
+                                <li><a href="#">Social Media Directory</a></li> 
+                                <li><a href="#">Downloadable Schedules</a></li> 
+                                <li><a href="#">Fan Experience</a></li> 
+                                <li><a href="#">Camps & Clinics</a></li> 
+                                <li><a href="#">Cheer, Dance, & Mascots</a></li> 
+                                <li><a href="#">Official Gameday App</a></li> 
+                                <li><a href="#">All Sports Calendar</a></li> 
+                                <li><a href="#">Student Rewards</a></li> 
+                                <li><a href="#">Junior Vols</a></li>
+                                <h3 class="title">Multimedia</h3>
+                                <li><a href="#">Live Audio & Video</a></li>
+                                <li><a href="#">TV/Radio On-Demand</a></li> 
+                                <li><a href="#">Vol Network</a></li> 
+                                <li><a href="#">Radio/TV Information</a></li> 
+                                <li><a href="#">Photo Galleries</a></li> 
+                              </ul>
+                            </li>
+                            <li class="has-submenu">
+                              <a href="#">Shop</a>
+                              <ul class="sub-menu">
+                                <h3 class="title">Get Your Gear</h3>
+                                <li><a href="#">Official Online Store</a></li>
+                                <li><a href="#">Men</a></li> 
+                                <li><a href="#">Ladies</a></li> 
+                                <li><a href="#">Kids</a></li> 
+                                <li><a href="#">Jerseys</a></li> 
+                                <li><a href="#">T-Shirts</a></li> 
+                                <li><a href="#">Sweatshirts</a></li> 
+                                <li><a href="#">Hats</a></li> 
+                                <li><a href="#">NIKE</a></li> 
+                                <li><a href="#">Accessories</a></li>
+                                <li><a href="#">Custom Bobblehead Shop</a></li> 
+                                <li><a href="#">Vol Photo Store</a></li>
+                              </ul>
+                            </li>
+                            <li class="has-submenu">
+                              <a href="#">About</a>
+                              <ul class="sub-menu">
+                                <h3 class="title">About</h3>
+                                <li><a href="#">General Information</a></li>
+                                <li><a href="#">Facilities</a></li> 
+                                <li><a href="#">Title IX</a></li> 
+                                <li><a href="#">Compliance Office</a></li> 
+                                <li><a href="#">Media Information</a></li> 
+                                <li><a href="#">Thornton Student Life Center</a></li> 
+                                <li><a href="#">General Releases</a></li> 
+                                <li><a href="#">Staff Directory</a></li> 
+                                <li><a href="#">Feedback & Support</a></li> 
+                                <li><a href="#">Sports Medicine</a></li>
+                                <h3 class="title">History</h3>
+                                <li><a href="#">History Home</a></li>
+                                <li><a href="#">All-Time Records</a></li> 
+                                <li><a href="#">Retired Jerseys</a></li> 
+                                <li><a href="#">University of Tennessee</a></li> 
+                                <li><a href="#">National Championships</a></li>
+                                <li><a href="#">Traditions</a></li>
+                                <li><a href="#">Letterman's T Club</a></li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </nav>
+                      </div>
+                  </div>
+                  <!-- fullscreen dropdwon-head -->
+                  </div>
+                  </div>
+                  </div>
+                  <!--hamburger-->
+                  <div class="hamburger">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+                  <!--hamburger-->
+          </header>
+  </div>
+  <!--Header Section-->
+    <section>
+      <div class="row">
+        <h2 class="section-heading">Our Services</h2>
+      </div>
+      <div class="row">
+        <div class="column">
+          <div class="card">
+            <div class="icon-wrapper">
+              <i class="fas fa-hammer"></i>
+            </div>
+            <h3>Service Heading</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+              consequatur necessitatibus eaque.
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="icon-wrapper">
+              <i class="fas fa-brush"></i>
+            </div>
+            <h3>Service Heading</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+              consequatur necessitatibus eaque.
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="icon-wrapper">
+              <i class="fas fa-wrench"></i>
+            </div>
+            <h3>Service Heading</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+              consequatur necessitatibus eaque.
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="icon-wrapper">
+              <i class="fas fa-truck-pickup"></i>
+            </div>
+            <h3>Service Heading</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+              consequatur necessitatibus eaque.
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="icon-wrapper">
+              <i class="fas fa-broom"></i>
+            </div>
+            <h3>Service Heading</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+              consequatur necessitatibus eaque.
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <div class="icon-wrapper">
+              <i class="fas fa-plug"></i>
+            </div>
+            <h3>Service Heading</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam
+              consequatur necessitatibus eaque.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+  <script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+<script  src="./script.js"></script>
+<script type='text/javascript' src='#'></script>
+  <script type='text/javascript' src='#'></script>
+  <script type='text/javascript' src='#'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js'></script>
+  <script  src="./script.js"></script>
+  <script src="scripts/cart.js"></script>
+  <script src="scripts/index.js"></script>
+  <script src="scripts/over-cart.js"></script>
+  <script src="scripts/search.js"></script>
+  <script src="scripts/cookies.js"></script>
+  <script>
+              $(document).ready(function () {
+          $('.hamburger').click(() => {
+              $('.menu').toggleClass('nav-open');
+              $('.hamburger').toggleClass('nav-open');
+              if ($('.menu').hasClass('nav-open')) {
+              $('#sports, #sports-sub').addClass('active');
+              } else {
+              $('.active').removeClass('active');
+              }
+          });
+          
+          $('.has-submenu>a').click(function () {
+              if ($(this).hasClass('active')) {
+              $('.active').removeClass('active');
+              } else {
+              $('.active').removeClass('active');
+              $(this).toggleClass('active');
+              $(this).siblings().toggleClass('active');
+              }
+          });
+          
+          $('#search-icon').click(() => {
+              $('.search-container').toggleClass('search-active');
+              $('#search-icon').toggleClass('search-active');
+              $('#search').toggle();
+          });
+          
+          $('.search-form').submit(e => {
+              e.preventDefault();
+          });
+          });
+  </script>
+  <script>
+              var swiper = new Swiper(".swiper", {
+              effect: "coverflow",
+              grabCursor: true,
+              centeredSlides: true,
+              coverflowEffect: {
+                  rotate: 0,
+                  stretch: 0,
+                  depth: 100,
+                  modifier: 3,
+                  slideShadows: true
+              },
+              keyboard: {
+                  enabled: true
+              },
+              mousewheel: {
+                  thresholdDelta: 70
+              },
+              loop: true,
+              pagination: {
+                  el: ".swiper-pagination",
+                  clickable: true
+              },
+              breakpoints: {
+                  640: {
+                  slidesPerView: 2
+                  },
+                  768: {
+                  slidesPerView: 1
+                  },
+                  1024: {
+                  slidesPerView: 2
+                  },
+                  1560: {
+                  slidesPerView: 3
+                  }
+              }
+              });
+  </script>
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+var searchInput = document.getElementById("search-input");
+var searchButton = document.getElementById("search-button");
+var searchResults = document.getElementById("search-results");
+
+function updateSearchResults() {
+var searchTerm = searchInput.value.trim().toLowerCase();
+searchResults.innerHTML = "";
+
+if (searchTerm === "") {
+  searchResults.innerHTML = `<p>Type in the input to see products.</p>`;
+  return;
+}
+
+var products = document.querySelectorAll(".product");
+var foundResults = false;
+
+products.forEach(function (product, index) {
+  var titleElement = product.querySelector("h3");
+  var title = titleElement.textContent.toLowerCase();
+
+  if (title.includes(searchTerm)) {
+      var resultItem = document.createElement("div");
+      resultItem.className = "search-result";
+      var boldPart = title.slice(0, searchTerm.length);
+      var restOfTitle = title.slice(searchTerm.length);
+      resultItem.innerHTML = `<a href="#product-${index}"><strong>${boldPart}</strong>${restOfTitle}</a><br>`;
+      searchResults.appendChild(resultItem);
+      foundResults = true;
+
+      // Scroll to the product when the result item is clicked
+      resultItem.querySelector("a").addEventListener("click", function (e) {
+          e.preventDefault();
+          // Scroll smoothly to the product using JavaScript
+          product.scrollIntoView({ behavior: "smooth" });
+          // Highlight the product title
+          titleElement.style.backgroundColor = "#673AB7";
+          titleElement.style.padding = "5px";
+          titleElement.style.marginTop = "5px";
+          titleElement.style.color = "#fff";
+          titleElement.style.borderRadius = "5px";
+          titleElement.style.animation = "found";
+          titleElement.style.animationDuration = "4s";
+          titleElement.style.animationPlayState = "ease-in-out";
+      });
+  }
+});
+
+if (!foundResults) {
+  searchResults.innerHTML = `<p>No matching items found.</p>`;
+}
+}
+
+// Initiate search when typing starts
+searchInput.addEventListener("input", function () {
+updateSearchResults();
+});
+
+// Search with Enter button
+searchInput.addEventListener("keyup", function (event) {
+if (event.key === "Enter") {
+  updateSearchResults();
+}
+});
+
+// Search button click event
+searchButton.addEventListener("click", function () {
+updateSearchResults();
+});
+});
+
+</script>
+</html>
