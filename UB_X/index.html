@@ -584,7 +584,7 @@ right: 70px;
                                 </ul>
                               </li>
                               <li class="has-submenu">
-                                <a href="about us.html">About Us</a>
+                                <a href=" about.html">About Us</a>
                                 <ul class="sub-menu">
                                   <h3 class="title">About Us</h3>
                                   
@@ -698,7 +698,7 @@ right: 70px;
     </div>
     <!--Landing Page-->
     <!--Product-->
-    <div class="flex-container">
+    <div class="flex-container" id="store">
         <div class="flex-item-left">
             <div class="product">
                 <div class="image">
@@ -2150,9 +2150,23 @@ right: 70px;
     </div>
     <!--Product-->
     <!--Cookie-->
-    <div id="cookie-banner">
-                <p>This website uses cookies. By continuing to use this site, you accept our use of cookies.</p>
-                <button id="accept-cookies">Accept</button>
+    <div class="modal-container">
+        <div class="modal">
+            <div class="modal-content">
+                <h2>We use cookies!</h2>
+                <p>This website uses cookies to ensure you get the best experience on our website.</p>
+                <label for="terms-checkbox">
+                    <input type="checkbox" id="terms-checkbox"> Accept Terms and Conditions
+                </label>
+                <div class="terms-links">
+                    <a href="privacy_policy.html" target="_blank">Privacy Policy</a>
+                </div>
+                <div class="buttons">
+                    <button class="accept-button" disabled>Accept</button>
+                    <button class="deny-button">Deny</button>
+                </div>
+            </div>
+        </div>
     </div>
     <!--Cookie-->
     <!--Overlay cart-->
@@ -2567,5 +2581,43 @@ right: 70px;
         });
     });
     
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    const modalContainer = document.querySelector(".modal-container");
+    const acceptButton = document.querySelector(".accept-button");
+    const termsCheckbox = document.getElementById("terms-checkbox");
+    const denyButton = document.querySelector(".deny-button");
+
+    termsCheckbox.addEventListener("change", function() {
+        acceptButton.disabled = !termsCheckbox.checked;
+    });
+
+    // Check if cookie consent is already given
+    const isConsentGiven = localStorage.getItem("cookieConsent");
+
+    // Check if the user is a new visitor (for demonstration purposes, assume the user is new)
+    const isNewVisitor = true;
+
+    if (!isConsentGiven && isNewVisitor) {
+        modalContainer.classList.remove("hide");
+    }
+
+    acceptButton.addEventListener("click", function() {
+        localStorage.setItem("cookieConsent", "true");
+        modalContainer.classList.add("hide");
+    });
+
+    denyButton.addEventListener("click", function() {
+        const isDeniedBefore = localStorage.getItem("cookieDenied");
+        if (isDeniedBefore) {
+            modalContainer.classList.add("hide");
+        } else {
+            alert("Some services will be unavailable without cookies being enabled.");
+            localStorage.setItem("cookieDenied", "true");
+        }
+    });
+});
+
     </script>
         </html>

@@ -18,6 +18,8 @@ function calculateTotal() {
 // Function to display the receipt summary
 function displayReceiptSummary() {
     var subtotalElement = document.getElementById("subtotal");
+    var subtotalElements = document.getElementById("subtotals");
+    var totalElements = document.getElementById("totals");
     var totalElement = document.getElementById("total");
 
     var subtotal = calculateTotal();
@@ -25,7 +27,9 @@ function displayReceiptSummary() {
     var total = subtotal + shippingCost;
 
     subtotalElement.textContent = `KSH ${subtotal.toFixed(2)}`;
+    subtotalElements.textContent = `KSH ${subtotal.toFixed(2)}`;
     totalElement.textContent = `KSH ${total.toFixed(2)}`;
+    totalElements.textContent = `KSH ${total.toFixed(2)}`;
 }
 
 // Load cart data from localStorage
