@@ -205,18 +205,3 @@
             width: unset;
         }
     }
-
-       /* cookie banner styles go here */
-       #cookie-banner {
-        display: none;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: #014e5a;
-        color: #fff;
-        padding: 10px;
-        text-align: center;
-    }
-
-   
