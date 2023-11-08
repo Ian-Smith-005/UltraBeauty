@@ -83,7 +83,7 @@
                                                     <div class="d-flex flex-column px-md-5 px-4 mb-4">
                                                         <span> Full Names</span>
                                                         <div class="inputWithIcon">
-                                                            <input class="form-control text-uppercase" type="text" value="" required>
+                                                            <input id="customer_name" class="form-control text-uppercase" type="text" value="" required>
                                                             <span class="far fa-user"></span>
                                                         </div>
                                                     </div>
@@ -92,7 +92,7 @@
                                                     <div class="d-flex flex-column px-md-5 px-4 mb-4">
                                                         <span>Mobile Number</span>
                                                         <div class="inputWithIcon">
-                                                            <input class="form-control" type="tel" value="" required  autocomplete="off" oninput="this.value = this.value.replace(/[^0-9]/g, ''); if(this.value.length > 10) this.value = this.value.slice(0, 10);">
+                                                            <input id="customer_phonenumber" class="form-control" type="tel" value="" required  autocomplete="off" oninput="this.value = this.value.replace(/[^0-9]/g, ''); if(this.value.length > 10) this.value = this.value.slice(0, 10);">
                                                             <span> <img src="https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img,w_1024/https://tradingroom.co.ke/wp-content/uploads/2021/06/Mpesa-1024x538.png" alt=""></span>
                                                         </div>
                                                     </div>
@@ -101,7 +101,7 @@
                                                     <div class="d-flex flex-column ps-md-5 px-md-0 px-4 mb-4">
                                                         <span>Delivery<span class="ps-1">Location</span></span>
                                                         <div class="inputWithIcon">
-                                                            <input class="form-control" type="text" value="" placeholder="i.e kileleshwa" required oninput="this.value = this.value.toLowerCase();">
+                                                            <input id="customer_delivery_location" class="form-control" type="text" value="" placeholder="i.e kileleshwa" required oninput="this.value = this.value.toLowerCase();">
                                                             <span class="fas fa-map-marker-alt"></span>
                                                         </div>
                                                     </div>
@@ -167,8 +167,8 @@
                                                 </div>
                                             
                                                 <div class="col-12 px-md-5 px-4 mt-3">
-                                                    <button type="submit" class="btn btn-primary w-100">
-                                                         Continue to payment
+                                                    <button type="submit" id="stkpush_complete_payment" class="btn btn-primary w-100">
+                                                         COMPLETE PAYMENT
                                                     </button>
                                                 </div>
                                             </div>
@@ -342,5 +342,42 @@ creationDateElement.textContent = 'Creation Date: ' + formattedDate;
                           </script>
                         
                              <script src="scripts/checkout.js"></script>
+                             <script>
+document.getElementById("stkpush_complete_payment").addEventListener("click", function(event) {
+    event.preventDefault(); // Prevent the default form submission behavior
+
+    // Get values from input fields
+    const fullName = document.getElementById("customer_name").value;
+    const phoneNumber = document.getElementById("customer_phonenumber").value;
+    const deliveryLocation = document.getElementById("customer_delivery_location").value;
+    const selectedCounty = document.getElementById("counties").value;
+
+    // Create an object to store the data
+    const paymentData = {
+        fullName: fullName,
+        phoneNumber: phoneNumber,
+        deliveryLocation: deliveryLocation,
+        county: selectedCounty
+    };
+
+    // Send the data to your Node.js server
+    fetch("http://localhost:4000/api/payment", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(paymentData)
+    })
+    .then(response => response.json())
+    .then(data => {
+        // Handle the response from the server, e.g., show a success message
+        console.log("Payment data sent successfully:", data);
+    })
+    .catch(error => {
+        // Handle any errors that occur during the POST request
+        console.error("Error sending payment data:", error);
+    });
+});
+                             </script>
                                  </body>
                             </html>
