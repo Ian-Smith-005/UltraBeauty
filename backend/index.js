@@ -2,8 +2,11 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const mysql = require('mysql');
+const bodyParser = require("body-parser");
 
 app.use(cors());
+
+app.use(bodyParser.json());
 
 class Database {
   constructor() {
@@ -60,7 +63,7 @@ app.get('/customers', (req, res)=>{
 
 app.post('/customers', (req, res) => {
   const { country, phone_number, delivery_location } = req.body;
-  const sql = 'INSERT INTO customer_info (country, phone_number, delivery_location) VALUES (?, ?, ?)';
+  const sql = 'INSERT INTO customer_info (county_name, phone_number, delivery_location, full_names) VALUES (?, ?, ?)';
   const values = [country, phone_number, delivery_location];
 
   db.query(sql, values, (err, data) => {
@@ -74,9 +77,25 @@ app.post('/customers', (req, res) => {
   });
 });
 
-app.put('/customers:customer_id', (req, res)=>{
-  
-})
+app.post("/api/payment", (req, res) => {
+  const paymentData = req.body;
+
+  // Define an SQL query to insert data into the customer_info table
+  const sql = "INSERT INTO customer_info (county_name, phone_number, delivery_location, full_names) VALUES (?, ?, ?, ?)";
+  const params = [paymentData.county, paymentData.phoneNumber, paymentData.deliveryLocation, paymentData.fullName];
+
+  // Execute the SQL query using your Database class
+  db.query(sql, params, (err, result) => {
+      if (err) {
+          // Handle any errors that occur during the database interaction
+          console.error("Error saving payment data:", err);
+          res.status(500).json({ message: "An error occurred while saving payment data" });
+      } else {
+          // Send a success response back to the client
+          res.json({ message: "Payment data received and saved successfully" });
+      }
+  });
+});
 
   
 
