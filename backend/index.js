@@ -81,8 +81,8 @@ app.post("/api/payment", (req, res) => {
   const paymentData = req.body;
 
   // Define an SQL query to insert data into the customer_info table
-  const sql = "INSERT INTO customer_info (county_name, phone_number, delivery_location, full_names) VALUES (?, ?, ?, ?)";
-  const params = [paymentData.county, paymentData.phoneNumber, paymentData.deliveryLocation, paymentData.fullName];
+  const sql = "INSERT INTO customer_info (county_name, phone_number, delivery_location, full_names, total_cost_items) VALUES (?, ?, ?, ?)";
+  const params = [paymentData.county, paymentData.phoneNumber, paymentData.deliveryLocation, paymentData.fullName, paymentData.total_cost_items];
 
   // Execute the SQL query using your Database class
   db.query(sql, params, (err, result) => {
