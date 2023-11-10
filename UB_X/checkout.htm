@@ -369,6 +369,9 @@ document.getElementById("stkpush_complete_payment").addEventListener("click", fu
         body: JSON.stringify(paymentData)
     })
     .then(response => response.json())
+
+
+    
     .then(data => {
         // Handle the response from the server, e.g., show a success message
         console.log("Payment data sent successfully:", data);
