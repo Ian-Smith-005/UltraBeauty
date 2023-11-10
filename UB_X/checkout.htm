@@ -342,72 +342,75 @@ creationDateElement.textContent = 'Creation Date: ' + formattedDate;
                         
                              <script src="scripts/checkout.js"></script>
                              <script>
-document.getElementById("stkpush_complete_payment").addEventListener("click", function(event) {
-    event.preventDefault(); // Prevent the default form submission behavior
+        document.getElementById("stkpush_complete_payment").addEventListener("click", function(event) {
+            event.preventDefault();
 
-    // Get values from input fields
-    const fullName = document.getElementById("customer_name").value;
-    const phoneNumber = document.getElementById("customer_phonenumber").value;
-    const deliveryLocation = document.getElementById("customer_delivery_location").value;
-    const selectedCounty = document.getElementById("counties").value;
-    const totalCost = document.getElementById("totals").innerText;
-    const cleanTotalCost = totalCost.replace(/[KSH]/g, "");
-    // Create an object to store the data
-    const paymentData = {
-        fullName: fullName,
-        phoneNumber: phoneNumber,
-        deliveryLocation: deliveryLocation,
-        county: selectedCounty,
-        total_cost_items: totalCost
-    };
-    alert(cleanTotalCost);
-    alert(phoneNumber);
-    const StkPush ={
-      amount: cleanTotalCost,
-      msisdn: phoneNumber
-      
-    }
-    fetch("https://tinypesa.com/api/v1/express/initialize",{
-      method: "POST",
-      headers: {
-        "Accept": "application/json",
-        "Apikey": "Ke9T5NVYlJU"
-      },
-      body: JSON.stringify(StkPush)
-    })
-    .then(response => response.json())
-    .then(data=>{
-      console.log("STK PUSH with error:", data);
+            // Your existing data retrieval logic
+            const fullName = document.getElementById("customer_name").value;
+            const phoneNumber = document.getElementById("customer_phonenumber").value;
+            const deliveryLocation = document.getElementById("customer_delivery_location").value;
+            const selectedCounty = document.getElementById("counties").value;
+            const totalCost = document.getElementById("totals").innerText;
+            const cleanTotalCost = totalCost.replace(/[KSH]/g, "");
 
-    })
-    .catch(error => {
-        // Handle any errors that occur during the POST request
-        console.error("Error sending STK PUSH:", error);
-    });
+            // New: Get the amount to request
+            const amount = cleanTotalCost;
+            alert(amount);
+            alert(phoneNumber);
 
+            // Data for STK push request
+            const stkPushData = {
+                amount: amount,
+                msisdn: phoneNumber
+            };
 
+            // Data for payment data to be sent to the database
+            const paymentData = {
+                fullName: fullName,
+                phoneNumber: phoneNumber,
+                deliveryLocation: deliveryLocation,
+                county: selectedCounty
+            };
 
-    // Send the data to your Node.js server
-    fetch("http://localhost:4000/api/payment", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(paymentData)
-    })
-    .then(response => response.json())
+            // Make a POST request to TinyPesa API for STK push
+            fetch("https://tinypesa.com/api/v1/express/initialize", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Accept": "application/json",
+                    "Apikey": "Ke9T5NVYlJU"
+                },
+                body: JSON.stringify(stkPushData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Handle the response from TinyPesa, e.g., show a success message
+                console.log("STK push request successful:", data);
 
+                // Continue with saving payment data to your database
+                fetch("http://localhost:4000/api/payment", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(paymentData)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    // Handle the response from your backend, e.g., show a success message
+                    console.log("Payment data sent successfully:", data);
+                })
+                .catch(error => {
+                    // Handle any errors that occur during the payment data POST request
+                    console.error("Error sending payment data:", error);
+                });
+            })
+            .catch(error => {
+                // Handle any errors that occur during the STK push request
+                console.error("Error sending STK push request:", error);
+            });
+        });
 
-
-    .then(data => {
-        // Handle the response from the server, e.g., show a success message
-        console.log("Payment data sent successfully:", data);
-    })
-    .catch(error => {
-        // Handle any errors that occur during the POST request
-        console.error("Error sending payment data:", error);
-    });
-});
-                             </script>
-                                 </body>
-                            </html>
+</script> 
+</body>
+</html>
