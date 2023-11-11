@@ -388,6 +388,7 @@ creationDateElement.textContent = 'Creation Date: ' + formattedDate;
                 console.log("STK push request successful:", data);
 
                 // Continue with saving payment data to your database
+                
                 fetch("http://localhost:4000/api/payment", {
                     method: "POST",
                     headers: {
