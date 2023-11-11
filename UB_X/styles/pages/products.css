@@ -38,16 +38,17 @@
     .flex-container {
       display: flex;
       flex-wrap: wrap;
-    margin: 2px;
+    margin: 70px;
     font-family: 'Maven Pro', sans-serif;
     padding: 10px;
+    background-color:#004658;
     }
     .product{
       width: 100%;
     }
 
     .flex-item-left {
-      background:linear-gradient( #004658);
+      background:linear-gradient( #ffffff);
       flex: 20%;
       font-family: 'Maven Pro', sans-serif;
     padding: 5px;
@@ -55,6 +56,7 @@
       margin: .5px;
       width: flex;
       text-align: center;
+     
     }
     @media (max-width: 1200px){
         .flex-item-left{
