@@ -31,13 +31,13 @@
       overflow: hidden;
       margin-right: 13px;
       border-radius: 15px;
-      background: #eca7a7;
+      background: #ffffff;
       box-shadow: inset 15px 15px 30px #bd8686,
             inset -15px -15px 30px #ffc8c8;
     }
     .flex-container {
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap:wrap;
     margin: 70px;
     font-family: 'Maven Pro', sans-serif;
     padding: 10px;
@@ -45,6 +45,7 @@
     }
     .product{
       width: 100%;
+      
     }
 
     .flex-item-left {
