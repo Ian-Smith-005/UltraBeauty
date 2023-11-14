@@ -38,7 +38,7 @@
     .flex-container {
       display: flex;
       flex-wrap:wrap;
-    margin: 70px;
+    margin: 50px;
     font-family: 'Maven Pro', sans-serif;
     padding: 10px;
     background-color:#004658;

@@ -1388,7 +1388,15 @@
         min-height: 100vh;
         column-gap: 3rem;
         padding-block: min(20vh, 3rem);
+        margin-bottom: -10%;
         }
+         
+        @media screen and (max-width: 767px) {
+          /* Adjust styles for screens with a maximum width of 767px (typical mobile phones) */
+          main {
+              margin-bottom: -30%;
+          }
+      }
 
         .bg {
         position: fixed;
