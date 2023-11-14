@@ -1394,7 +1394,7 @@
         @media screen and (max-width: 767px) {
           /* Adjust styles for screens with a maximum width of 767px (typical mobile phones) */
           main {
-              margin-bottom: -30%;
+              margin-bottom: -10%;
           }
       }
 
