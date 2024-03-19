@@ -9,12 +9,23 @@
     }
 
     .product img {
-      width: 190px;
-      height: 450px;
+      width: 110px;
+      height: 370px;
       object-fit:cover;
     
     }
+
+   
+    @media(max-width:776px){
+      .product img{
+        width: 100px;
+        height: 320px;
+      }}
     
+      .title{
+        font-size: 20px;
+      }
+      
     .products-container {
       max-width: 4000px;
       margin: 20px auto;
@@ -33,7 +44,7 @@
       border-radius: 15px;
       background: #ffffff;
       box-shadow: inset 15px 15px 30px #bd8686,
-            inset -15px -15px 30px #ffc8c8;
+           inset -15px -15px 30px #ffc8c8;
     }
     .flex-container {
       display: flex;
@@ -43,14 +54,22 @@
     padding: 10px;
     background-color:#004658;
     }
+
+    @media(max-width:776px){
+      .flex-container{
+        margin: 5px;
+        padding: 2px;
+        margin-top: 50px;
+        width: 100%;
+      }
+    }
     .product{
       width: 100%;
-      
     }
 
-    .flex-item-left {
+    .flex-item-left{
       background:linear-gradient( #ffffff);
-      flex: 20%;
+      flex: 10%;
       font-family: 'Maven Pro', sans-serif;
     padding: 5px;
     border-radius: 5px;
@@ -59,23 +78,20 @@
       text-align: center;
      
     }
-    @media (max-width: 1200px){
-        .flex-item-left{
-            flex: 25%;
-        }
+    
+
+  @media(max-width:776px){
+    .flex-item-left{
+flex: 47%;
+max-width: 47%;
+padding: 3px;
+border-radius:1px ;
+margin: 5px;
+
     }
-    /* Responsive layout - makes a one column-layout instead of a two-column layout */
-    @media (max-width: 800px) {
-      .flex-item-right, .flex-item-left {
-        flex: 40%;
-        text-align: center;
-      }
-    }
-    @media (max-width: 600px) {
-      .flex-item-right, .flex-item-left {
-        flex: 100%;
-      }
-    }
+  }
+
+  
     .image img{
         width: 100%;
         border-top-left-radius: 5px;
@@ -87,6 +103,11 @@
         margin:auto;
         text-align: center;
     }
+    @media(max-width:776px){
+      .prices{
+        display: none;
+      }}
+
     .prices span {
     height: 30px;
     width: 10%;
@@ -95,32 +116,38 @@
     padding: 5px;
     margin: 1px;
     border-radius: 2px;
-    border: .5px solid #ff69b4;
-    color: #ff69b4;
+    border: .5px solid #e81c4f;
+    color:#e81c4f;
     cursor: pointer;
     font-size: 12px;
     transition: background 0.9s, border-color 0.9s, color 0.9s; /* Added transitions */
 }
 
 .prices span:hover {
-    background: #bd005f;
+    background: #e81c4f;
     border: .5px solid #fff;
     color: #fff;
 }
 .prices span.active {
-    background: #ff69b4;
+    background: #e81c4f;
     border: .5px solid #fff;
     color: #fff;
 }
     .items-head{
         font-size: 12px;
-        color: #ff69b4;
+        color: #e81c4f;
+        font-weight: 500;
     }
+    @media(max-width:776px){
+      .items-head{
+        display: none;
+      }}
+
     .add-to-cart-btn {
 width: 100%;
 padding: 0.4em 1em;
 background: none;
-border: .5px solid #eaa2a2;
+border: .5px solid #e81c4f;
 font-size: 15px;
 color: #ffffff;
 cursor: pointer;
@@ -167,6 +194,16 @@ transform: scale(0.9);
 /* Define styles for the button */
 
 .price{
-    font-weight: 900;
+    font-weight: 500;
+    font-size: 18px;
+}
+.currency{
+  font-size: 18px;
+  font-weight:500;
+}
+
+.description{
+  font-size:15px;
+  color: #000;
 }
 

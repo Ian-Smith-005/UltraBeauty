@@ -88,6 +88,7 @@ function updateCart() {
 
     var tax = 200; // Assuming a 6% tax rate
     var total = subtotal + tax;
+     
 
     subtotalElement.textContent = `KSH ${subtotal.toFixed(2)}`;
     totalElement.textContent = `KSH ${total.toFixed(2)}`;
@@ -109,31 +110,34 @@ updateCart();
 
 // Function to add a product to the cart
 function addToCart(button) {
-var productDetails = button.parentElement;
-var title = productDetails.querySelector(".title").textContent;
-var description = productDetails.querySelector(".description").textContent;
-var price = parseFloat(productDetails.querySelector(".price").textContent);
-var currency = productDetails.querySelector(".currency").textContent;
-var image = productDetails.parentElement.querySelector(".image img").src;
-var selectedQuantity = parseInt(productDetails.querySelector(".prices span.active").textContent); // Get the selected quantity
+    var productDetails = button.parentElement;
+    var title = productDetails.querySelector(".title").textContent;
+    var description = productDetails.querySelector(".description").textContent;
+    var price = parseFloat(productDetails.querySelector(".price").textContent);
+    var currency = productDetails.querySelector(".currency").textContent;
+    var image = productDetails.parentElement.querySelector(".image img").src;
 
-var existingItemIndex = cartItems.findIndex(item => item.title === title);
+    // Get the selected quantity, default to 1 if no quantity is selected
+    var selectedQuantity = parseInt(productDetails.querySelector(".prices span.active")?.textContent) || 1;
 
-if (existingItemIndex !== -1) {
-cartItems[existingItemIndex].quantity += selectedQuantity; // Add the selected quantity
-} else {
-cartItems.push({
-    title: title,
-    description: description,
-    price: price,
-    quantity: selectedQuantity, // Set the quantity to the selected quantity
-    currency: currency,
-    image: image
-});
+    var existingItemIndex = cartItems.findIndex(item => item.title === title);
+
+    if (existingItemIndex !== -1) {
+        cartItems[existingItemIndex].quantity += selectedQuantity; // Add the selected quantity
+    } else {
+        cartItems.push({
+            title: title,
+            description: description,
+            price: price,
+            quantity: selectedQuantity, // Set the quantity to the selected quantity
+            currency: currency,
+            image: image
+        });
+    }
+
+    updateCart();
 }
 
-updateCart();
-}
 
 // Function to increase quantity
 function increaseQuantity(index, price) {

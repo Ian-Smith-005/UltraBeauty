@@ -63,6 +63,8 @@
     border-radius: 5px;
 }
 
+
+
 .book {
     margin: 20px 15px 5px 15px;
 }
@@ -191,12 +193,12 @@ button:focus {
 #search-results {
     position: fixed;
     display: block;
-    background: honeydew;
-    line-height: 20px;
-    width: 60%;
+    background: rgb(255, 255, 255);
+     line-height: 20px;
+    width: 50%;
     color: #bf8c0c;
-height: 400px;
-    top: 400px;
+    height: 300px;
+    top: 250px;
     overflow-y: auto;
     left: 50%; /* Set left to 50% */
     transform: translate(-50%, -50%); /* Center the div */

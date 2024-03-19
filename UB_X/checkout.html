@@ -12,260 +12,346 @@
         <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles/pages/checkout.css">
         <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+        <script src="https://rawgit.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
         <link rel=”stylesheet” href=”https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css”rel=”nofollow” integrity=”sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm” crossorigin=”anonymous”>
+       
 
-                                </head>
-                                <body className='snippet-body'>
-                                <div class="container bg-light d-md-flex align-items-center">
-                                    <a href="index.html" style="color: rgb(0, 0, 0); text-decoration: none;">
-                                        <span class="fas fa-arrow-left" style="color: rgb(21, 21, 21);"></span> Back
-                                    </a>
-                                    <div class="card box1 shadow-sm p-md-5 p-4">
-                                       
-                                        <div class="d-flex flex-column">
-                                            <div class="d-flex align-items-center justify-content-between text">
-                                                <span>Subtotal</span>
-                                                <span class="fa-solid fa-money-bill"><span class="ps-1" id="subtotal">0.00</span></span>
-                                            </div>
-                                            <div class="d-flex align-items-center justify-content-between text">
-                                                <span>Shipping</span>
-                                                <span class="fa-solid fa-money-bill"><span class="ps-1">KSH 200.00</span></span>
-                                            </div>
-                                            <div class="d-flex align-items-center justify-content-between text mb-4">
-                                                <span>Total</span>
-                                                <span class="fa-solid fa-money-bill"><span class="ps-1" id="total">0.00</span></span>
-                                            </div>
-                                            <div class="border-bottom mb-4"></div>
-                                            <div class="d-flex flex-column mb-4">
-                                                <span class="far fa-file-alt text"><span class="ps-2">Purchase ID:</span></span>
-                                                <span class="ps-3" id="purchase-id">SN**********</span>
-                                            </div>
 
-                                            <div class="d-flex align-items-center justify-content-between text mt-5">
-                                                <div class="d-flex flex-column text">
-                                                    <span>Customer Support:</span>
-                                                    <span>online chat 24/7</span>
-                                                </div>
-                                                <a href="https://wa.me/254746668619">
-                                                    <div class="btn btn-primary rounded-circle">
-                                                      <span class="fas fa-comment-alt"></span>
-                                                    </div>
-                                                  </a>
-                                                  
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="card box2 shadow-sm">
-                                        <div class="d-flex align-items-center justify-content-between p-md-5 p-4">
-                                            <span class="h5 fw-bold m-0">Payment methods</span>
-                                            <div class="btn btn-primary bar"><a href="index.html"><span class="fas fa-cart-shopping"></span></a></div>
-                                        </div>
-                                        <ul class="nav nav-tabs mb-3 px-md-4 px-2">
-                                            <li class="nav-item">
-                                                <a class="nav-link px-2" aria-current="page" href="#">Credit Card</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link px-2 active" href="#">Mobile Payment</a>
-                                            </li>
-                                           
-                                        </ul>
-                                        <div class="px-md-5 px-4 mb-4 d-flex align-items-center">
-                                            <div class="btn btn-success me-4"><a href="index.html" ><span class="fas fa-plus"></span></a></div>
-                                            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-                                                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
-                                                <label class="btn btn-outline-primary" for="btnradio1"><span class="pe-1"></span><span id="total" style="color: #fff;">Check Out Cart</span></label>
-                                                
-                                            </div>
-                                        </div>
-                                        <form action="">
-                                            <div class="row">
-                                                <div class="col-12">
-                                                    <div class="d-flex flex-column px-md-5 px-4 mb-4">
-                                                        <span> Full Names</span>
-                                                        <div class="inputWithIcon">
-                                                            <input id="customer_name" class="form-control text-uppercase" type="text" value="" required>
-                                                            <span class="far fa-user"></span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-12">
-                                                    <div class="d-flex flex-column px-md-5 px-4 mb-4">
-                                                        <span>Mobile Number</span>
-                                                        <div class="inputWithIcon">
-                                                            <input id="customer_phonenumber" class="form-control" type="tel" value="" required  autocomplete="off" oninput="this.value = this.value.replace(/[^0-9]/g, ''); if(this.value.length > 10) this.value = this.value.slice(0, 10);">
-                                                            <span> <img src="https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img,w_1024/https://tradingroom.co.ke/wp-content/uploads/2021/06/Mpesa-1024x538.png" alt=""></span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="d-flex flex-column ps-md-5 px-md-0 px-4 mb-4">
-                                                        <span>Delivery<span class="ps-1">Location</span></span>
-                                                        <div class="inputWithIcon">
-                                                            <input id="customer_delivery_location" class="form-control" type="text" value="" placeholder="i.e kileleshwa" required oninput="this.value = this.value.toLowerCase();">
-                                                            <span class="fas fa-map-marker-alt"></span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                
-                                                <div class="col-md-6">
-                                                    <div class="d-flex flex-column pe-md-5 px-md-0 px-4 mb-4">
-                                                        <span>Delivery county</span>
-                                                        <div class="inputWithIcon">
-                                                            <select name="counties" id="counties" >
-                                                                <option value="" class="text-uppercase">Select</option>
-                                                                <option value="Baringo">Baringo</option>
-                                                                <option value="Bomet">Bomet</option>
-                                                                <option value="Bungoma">Bungoma</option>
-                                                                <option value="Busia">Busia</option>
-                                                                <option value="Elgeyo-Marakwet">Elgeyo-Marakwet</option>
-                                                                <option value="Embu">Embu</option>
-                                                                <option value="Garissa">Garissa</option>
-                                                                <option value="Homa Bay">Homa Bay</option>
-                                                                <option value="Isiolo">Isiolo</option>
-                                                                <option value="Kajiado">Kajiado</option>
-                                                                <option value="Kakamega">Kakamega</option>
-                                                                <option value="Kericho">Kericho</option>
-                                                                <option value="Kiambu">Kiambu</option>
-                                                                <option value="Kilifi">Kilifi</option>
-                                                                <option value="Kirinyaga">Kirinyaga</option>
-                                                                <option value="Kisii">Kisii</option>
-                                                                <option value="Kisumu">Kisumu</option>
-                                                                <option value="Kitui">Kitui</option>
-                                                                <option value="Kwale">Kwale</option>
-                                                                <option value="Laikipia">Laikipia</option>
-                                                                <option value="Lamu">Lamu</option>
-                                                                <option value="Machakos">Machakos</option>
-                                                                <option value="Makueni">Makueni</option>
-                                                                <option value="Mandera">Mandera</option>
-                                                                <option value="Marsabit">Marsabit</option>
-                                                                <option value="Meru">Meru</option>
-                                                                <option value="Migori">Migori</option>
-                                                                <option value="Mombasa">Mombasa</option>
-                                                                <option value="Murang'a">Murang'a</option>
-                                                                <option value="Nairobi">Nairobi</option>
-                                                                <option value="Nakuru">Nakuru</option>
-                                                                <option value="Nandi">Nandi</option>
-                                                                <option value="Narok">Narok</option>
-                                                                <option value="Nyamira">Nyamira</option>
-                                                                <option value="Nyandarua">Nyandarua</option>
-                                                                <option value="Nyeri">Nyeri</option>
-                                                                <option value="Samburu">Samburu</option>
-                                                                <option value="Siaya">Siaya</option>
-                                                                <option value="Taita-Taveta">Taita-Taveta</option>
-                                                                <option value="Tana River">Tana River</option>
-                                                                <option value="Tharaka-Nithi">Tharaka-Nithi</option>
-                                                                <option value="Trans Nzoia">Trans Nzoia</option>
-                                                                <option value="Turkana">Turkana</option>
-                                                                <option value="Uasin Gishu">Uasin Gishu</option>
-                                                                <option value="Vihiga">Vihiga</option>
-                                                                <option value="Wajir">Wajir</option>
-                                                                <option value="West Pokot">West Pokot</option>
-                                                              </select>
-                                                            <span class="fas fa-lock"></span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            
-                                                <div class="col-12 px-md-5 px-4 mt-3">
-                                                    <button type="submit" id="stkpush_complete_payment" class="btn btn-primary w-100">
-                                                         COMPLETE PAYMENT
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
-                                
+</head>
+<body className='snippet-body'>
+<div class="container bg-light d-md-flex align-items-center">
+  <a href="index.html" style="color: rgb(0, 0, 0); text-decoration: none;">
+      <span class="fas fa-arrow-left" style="color: rgb(21, 21, 21);"></span> Back
+  </a>
+  <div class="card box1 shadow-sm p-md-5 p-4">
+      
+      <div class="d-flex flex-column">
+          <div class="d-flex align-items-center justify-content-between text">
+              <span>Subtotal</span>
+              <span class="fa-solid fa-money-bill">
+                <span class="ps-1" id="subtotal">0.00</span></span>
+          </div>
+          <div class="d-flex align-items-center justify-content-between text">
+              <span>Shipping</span>
+              <span class="fa-solid fa-money-bill"><span class="ps-1">KSH 200.00</span></span>
+          </div>
+          <div class="d-flex align-items-center justify-content-between text mb-4">
+              <span>Total</span>
+              <span class="fa-solid fa-money-bill"><span class="ps-1" id="total">0.00</span></span>
+          </div>
+          <div class="border-bottom mb-4"></div>
+          <div class="d-flex flex-column mb-4">
+              <span class="far fa-file-alt text"><span class="ps-2">Purchase ID:</span></span>
+              <span class="ps-3" id="purchase-id">SN**********</span>
+          </div>
 
-                                <!-- Receipt -->
-                                <div class="card">
-                                    <div class="card-body">
-                                      <div class="container mb-5 mt-3">
-                                        <div class="row d-flex align-items-baseline">
-                                          <div class="col-xl-9">
-                                            <p style="color: #7e8d9f;font-size: 20px;">Invoice >> <strong id="secondIDnumber"></strong></p>
-                                          </div>
-                                          <div class="col-xl-3 float-end">
-                                            <a class="btn btn-light text-capitalize border-0" data-mdb-ripple-color="dark"><i
-                                                class="fas fa-print text-primary"></i> Print</a>
-                                            <a class="btn btn-light text-capitalize" data-mdb-ripple-color="dark"><i
-                                                class="far fa-file-pdf text-danger"></i> Export</a>
-                                          </div>
-                                          <hr>
-                                        </div>
-                                  
-                                        <div class="container">
-                                          <div class="col-md-12">
-                                            <div class="text-center">
-                                              <p class="pt-0">Receipt</p>
-                                            </div>
-                                  
-                                          </div>
-                                  
-                                  
-                                          <div class="row">
+          <div class="d-flex align-items-center justify-content-between text mt-5">
+              <div class="d-flex flex-column text">
+                  <span>Customer Support:</span>
+                  <span>online chat 24/7</span>
+              </div>
+              <a href="https://wa.me/254746668619">
+                  <div class="btn btn-primary rounded-circle">
+                    <span class="fas fa-comment-alt"></span>
+                  </div>
+                </a>
+                
+          </div>
+      </div>
+  </div>
+  <div class="card box2 shadow-sm">
+      <div class="d-flex align-items-center justify-content-between p-md-5 p-4">
+          <span class="h5 fw-bold m-0">Payment methods</span>
+          <div class="btn btn-primary bar"><a href="index.html"><span class="fas fa-cart-shopping"></span></a></div>
+      </div>
+      <ul class="nav nav-tabs mb-3 px-md-4 px-2">
+          <li class="nav-item">
+              <a class="nav-link px-2" aria-current="page" href="#">Credit Card</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link px-2 active" href="#">Mobile Payment</a>
+          </li>
+          
+      </ul>
+      <div class="px-md-5 px-4 mb-4 d-flex align-items-center">
+          <div class="btn btn-success me-4"><a href="index.html" ><span class="fas fa-plus"></span></a></div>
+          <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+              <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+              <label class="btn btn-outline-primary" for="btnradio1"><span class="pe-1"></span><span id="total" style="color: #fff;">Check Out Cart</span></label>
+              
+          </div>
+      </div>
+      <form action="">
+          <div class="row">
+              <div class="col-12">
+                  <div class="d-flex flex-column px-md-5 px-4 mb-4">
+                      <span> Full Names</span>
+                      <div class="inputWithIcon">
+                          <input id="customer_name" class="form-control text-uppercase" type="text" value="" required>
+                          <span class="far fa-user"></span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-12">
+                  <div class="d-flex flex-column px-md-5 px-4 mb-4">
+                      <span>Mobile Number</span>
+                      <div class="inputWithIcon">
+                          <input id="customer_phonenumber" class="form-control" type="tel" value="" required  autocomplete="off" oninput="this.value = this.value.replace(/[^0-9]/g, ''); if(this.value.length > 10) this.value = this.value.slice(0, 10);">
+                          <span> <img src="https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img,w_1024/https://tradingroom.co.ke/wp-content/uploads/2021/06/Mpesa-1024x538.png" alt=""></span>
+                      </div>
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="d-flex flex-column ps-md-5 px-md-0 px-4 mb-4">
+                      <span>Delivery<span class="ps-1">Location</span></span>
+                      <div class="inputWithIcon">
+                          <input id="customer_delivery_location" class="form-control" type="text" value="" placeholder="i.e kileleshwa" required oninput="this.value = this.value.toLowerCase();">
+                          <span class="fas fa-map-marker-alt"></span>
+                      </div>
+                  </div>
+              </div>
+              
+              <div class="col-md-6">
+                  <div class="d-flex flex-column pe-md-5 px-md-0 px-4 mb-4">
+                      <span>Delivery county</span>
+                      <div class="inputWithIcon">
+                          <select name="counties" id="counties" >
+                              <option value="" class="text-uppercase">Select</option>
+                              <option value="Baringo">Baringo</option>
+                              <option value="Bomet">Bomet</option>
+                              <option value="Bungoma">Bungoma</option>
+                              <option value="Busia">Busia</option>
+                              <option value="Elgeyo-Marakwet">Elgeyo-Marakwet</option>
+                              <option value="Embu">Embu</option>
+                              <option value="Garissa">Garissa</option>
+                              <option value="Homa Bay">Homa Bay</option>
+                              <option value="Isiolo">Isiolo</option>
+                              <option value="Kajiado">Kajiado</option>
+                              <option value="Kakamega">Kakamega</option>
+                              <option value="Kericho">Kericho</option>
+                              <option value="Kiambu">Kiambu</option>
+                              <option value="Kilifi">Kilifi</option>
+                              <option value="Kirinyaga">Kirinyaga</option>
+                              <option value="Kisii">Kisii</option>
+                              <option value="Kisumu">Kisumu</option>
+                              <option value="Kitui">Kitui</option>
+                              <option value="Kwale">Kwale</option>
+                              <option value="Laikipia">Laikipia</option>
+                              <option value="Lamu">Lamu</option>
+                              <option value="Machakos">Machakos</option>
+                              <option value="Makueni">Makueni</option>
+                              <option value="Mandera">Mandera</option>
+                              <option value="Marsabit">Marsabit</option>
+                              <option value="Meru">Meru</option>
+                              <option value="Migori">Migori</option>
+                              <option value="Mombasa">Mombasa</option>
+                              <option value="Murang'a">Murang'a</option>
+                              <option value="Nairobi">Nairobi</option>
+                              <option value="Nakuru">Nakuru</option>
+                              <option value="Nandi">Nandi</option>
+                              <option value="Narok">Narok</option>
+                              <option value="Nyamira">Nyamira</option>
+                              <option value="Nyandarua">Nyandarua</option>
+                              <option value="Nyeri">Nyeri</option>
+                              <option value="Samburu">Samburu</option>
+                              <option value="Siaya">Siaya</option>
+                              <option value="Taita-Taveta">Taita-Taveta</option>
+                              <option value="Tana River">Tana River</option>
+                              <option value="Tharaka-Nithi">Tharaka-Nithi</option>
+                              <option value="Trans Nzoia">Trans Nzoia</option>
+                              <option value="Turkana">Turkana</option>
+                              <option value="Uasin Gishu">Uasin Gishu</option>
+                              <option value="Vihiga">Vihiga</option>
+                              <option value="Wajir">Wajir</option>
+                              <option value="West Pokot">West Pokot</option>
+                            </select>
+                          <span class="fas fa-lock"></span>
+                      </div>
+                  </div>
+              </div>
+          
+              <div class="col-12 px-md-5 px-4 mt-3">
+                  <button type="submit" id="stkpush_complete_payment" class="btn btn-primary w-100">
+                        COMPLETE PAYMENT
+                  </button>
+              </div>
+          </div>
+      </form>
+  </div>
+</div>
 
-                                            <div class="col-xl-4">
-                                              <p class="text-muted">Invoice</p>
-                                              <ul class="list-unstyled">
-                                                <li class="text-muted"><i class="fas fa-circle" style="color:#84B0CA ;"></i> <span
-                                                    class="fw-bold" id="createDates">Creation Date: </span></li>
-                                                <li class="text-muted"><i class="fas fa-circle" style="color:#84B0CA ;"></i> <span
-                                                    class="me-1 fw-bold">Status:</span><span class="badge bg-warning text-black fw-bold">
-                                                    Unpaid</span></li>
-                                              </ul>
-                                            </div>
-                                          </div>
-                                  
-                                          <div class="row my-2 mx-1 justify-content-center">
-                                            <table class="table table-striped table-borderless">
-                                              <thead style="background-color:#84B0CA ;" class="text-white">
-                                                <tr>
-                                                  <th scope="col">#</th>
-                                                  <th scope="col">Description</th>
-                                                  <th scope="col">Qty</th>
-                                                  <th scope="col">Unit Price</th>
-                                                  <th scope="col">Amount</th>
-                                                </tr>
-                                              </thead>
-                                              <tbody>
-                                                
-                                              </tbody>
-                                  
-                                            </table>
-                                          </div>
-                                          <div class="row">
-                                            <div class="col-xl-3">
-                                              <ul class="list-unstyled">
-                                                <li class="text-muted ms-3"><span class="text-black me-4">SubTotal</span><span id="subtotals"> 0.00</span></li>
-                                                <li class="text-muted ms-3 mt-2"><span class="text-black me-4">Shipping<span>  200.00</li>
-                                              </ul>
-                                              <p class="text-black float-start"><span class="text-black me-3"> Total</span><span style="font-size: 25px;" id="totals"></span></p>
-                                            </div>
-                                          </div>
-                                          <hr>
-                                          <div class="row">
-                                            <div class="col-xl-10">
-                                              <p>Thank you for your purchase</p>
-                                            </div>
-                                          </div>
-                                  
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-<!-- Receipt -->
 
-                                <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js'></script>
-                                <script type='text/javascript' src='#'></script>
-                                <script type='text/javascript' src='#'></script>
-                                <script type='text/javascript' src='#'></script>
-                                <script type='text/javascript'>src='#'</script>
-                                <script type='text/javascript'>var myLink = document.querySelector('a[href="#"]');
-                                myLink.addEventListener('click', function(e) {
-                                  e.preventDefault();
-                                });</script>
-                            <script>
+
+<div>
+  
+</div>
+
+<div>
+<div class="card" id="receipt-container">
+  <div class="card-body">
+    <div class="container mb-5 mt-3">
+      <div class="row d-flex align-items-baseline">
+      
+        
+<div class="col-xl-3 float-end">
+<a class="btn btn-light text-capitalize btn-print" data-mdb-ripple-color="dark">
+  <i class="fas fa-print text-primary"></i> Save
+</a>
+</div>
+
+
+
+
+        <hr>
+      </div>
+
+      <div class="receipt-container">
+        <a href="index.html"><img class="ultra-logo" src="images/icons/logo.png" ></a>
+        <div class="col-md-12">
+          <div class="text-center">
+            <p class="pt-0">Receipt</p>
+          </div>
+
+        </div>
+
+
+        <div class="row">
+
+          <div class="col-xl-4">
+            <div class="col-xl-9">
+              <p style="color: #7e8d9f;font-size: 20px;">Purchase ID <strong id="secondIDnumber"></strong></p>
+            </div>
+            <ul class="list-unstyled">
+              <li class="text-muted"><i class="fas fa-circle" style="color:#84B0CA ;"></i> <span
+                  class="fw-bold" id="createDates">Creation Date: </span></li>
+              <li class="text-muted"><i class="fas fa-circle" style="color:#84B0CA ;"></i> <span
+                  class="me-1 fw-bold">Status:</span><span class="badge bg-warning text-black fw-bold">
+                  Unpaid</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row my-2 mx-1 justify-content-center">
+          <table class="table table-striped table-borderless">
+            <thead style="background-color:#84B0CA ;" class="text-white">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Product name</th>
+                <th scope="col">Qty</th>
+                <th scope="col">Unit Price</th>
+                <th scope="col">Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+            </tbody>
+
+          </table>
+        </div>
+        <div class="row">
+          <div class="col-xl-3">
+            <ul class="list-unstyled">
+              <li class="text-muted ms-3"><span class="text-black me-4">SubTotal</span><span id="subtotals"> 0.00</span></li>
+              <li class="text-muted ms-3 mt-2"><span class="text-black me-4">Shipping<span>  200.00</li>
+            </ul>
+            <p class="text-black float-start"><span class="text-black me-3"> Total</span><span style="font-size: 25px;" id="totals"></span></p>
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-xl-10">
+            <p>Thank you for your purchase</p>
+            <p>After payment, kindly forward this receipt to our whatsapp by clicking the whatsapp icon below for deliveries</p>
+          </div>
+          <div class="parent">
+   
+            <i class="child child-1">
+                <a class="button btn-1" href="https://wa.me/c/254746668619">
+                  <svg xmlns="http://www.w3.org/2000/svg"height="1.3em"  fill="#25D366" class="bi bi-whatsapp icon-shere" viewBox="0 0 16 16">
+                    <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"></path>
+                  </svg>
+                  </a>
+              </i>
+        
+              
+              <div class="child child-2">
+                <a href="https://www.instagram.com/ultrabeauty_africa">
+                  <button class="button btn-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512" fill="#ff00ff">
+                      <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
+                    </svg>
+                  </button>
+                </a>
+              </div>
+        
+              <div class="child child-2">
+                <a href="https://twitter.com/yourtwitterhandle">
+                  <button class="button btn-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" fill="#1DA1F2">
+                      <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
+                    </svg>
+                  </button>
+                </a>
+              </div>
+              
+              
+        
+            <div class="child child-4">
+                <a href="https://web.facebook.com/ultrabeautyafrica/">
+              <button class="button btn-4" >
+            <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 320 512" fill="#4267B2"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg></button>
+            </div>
+        </a>
+            </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+  <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js'></script>
+  <script type='text/javascript' src='#'></script>
+  <script type='text/javascript' src='#'></script>
+  <script type='text/javascript' src='#'></script>
+  <script type='text/javascript'>src='#'</script>
+  <script type='text/javascript'>var myLink = document.querySelector('a[href="#"]');
+  myLink.addEventListener('click', function(e) {
+    e.preventDefault();
+  });</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+
+<script src="https://rawgit.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+
+<script src="https://rawgit.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+     // Function to export the receipt as PDF
+     document.querySelector('.btn-print').addEventListener('click', function () {
+       var element = document.getElementById('receipt-container');
+ 
+       html2pdf(element);
+     });
+ 
+     // Trigger the 'click' event of the 'btn-print' button when the DOM is fully loaded
+     document.querySelector('.btn-print').click();
+  });
+ </script>
+
+
+
+
+  
+<script>
 function generateRandomString(length) {
   const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
   let result = '';
@@ -276,11 +362,9 @@ function generateRandomString(length) {
   return result;
 }
 
-// Get the purchaseIdSpan element and set its content
 const purchaseIdSpan = document.getElementById('purchase-id');
 purchaseIdSpan.textContent = 'UB' + generateRandomString(10);
 
-// Get the purchase-ids element and set its content
 const purchaseIdsElement = document.getElementById('secondIDnumber');
 purchaseIdsElement.textContent = purchaseIdSpan.textContent;
 const secondIdElement = document.getElementById('second-id');
@@ -288,21 +372,20 @@ secondIdElement = purchaseIdSpan.textContent;
 
                           </script>
                           <script>
-                            // Function to load cart data from localStorage
+                          
 function loadCartFromStorage() {
   var storedCartItems = localStorage.getItem("cartItems");
   if (storedCartItems) {
       return JSON.parse(storedCartItems);
   }
-  return []; // Return an empty array if no cart data is found in localStorage
+  return []; 
 }
 
-// Function to populate the table with cart data
 function populateTable() {
   var tbody = document.querySelector("tbody");
   var cartItems = loadCartFromStorage();
 
-  // Loop through cart items and populate the table rows
+ 
   cartItems.forEach(function (item, index) {
       var row = document.createElement("tr");
       row.innerHTML = `

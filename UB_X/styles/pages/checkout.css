@@ -30,8 +30,19 @@ background-image: url('https://images.unsplash.com/photo-1511923199659-1c1688168
 .container {
 margin: 20px auto;
 width: 800px;
-padding: 30px
+padding: 30px;
+border: 1px solid #000;
+
 }
+
+.ultra-logo{
+      height: 90px;
+      width: 150px;
+      text-align: center;
+    
+    }
+
+   
 
 .card.box1 {
 width: 350px;
@@ -257,4 +268,48 @@ background: none;
 .form-control::placeholder {
   color: #999; /* Placeholder text color */
   font-style: italic; /* Italicize the placeholder text */
+}
+.parent {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.child {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease-in-out;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+.child:hover {
+  background-color: rgb(255, 255, 255);
+  background-position: -100px 100px, -100px 100px;
+  transform: rotate3d(0.5, 1, 0, 30deg);
+  transform: perspective(180px) rotateX(60deg) translateY(2px);
+  box-shadow: 0px 10px 10px rgba(68, 68, 141, 0.862);
+  
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+}
+
+.button:hover {
+  width: inherit;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate3d(0px, 0px, 15px) perspective(180px) rotateX(-35deg) translateY(2px);
+  border-radius: 50%;
 }
